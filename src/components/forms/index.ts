@@ -10,3 +10,9 @@ export const UserUpdateProfileSchema = z.object({
     arrears: z.string().optional(),    
 })
 
+export const UserAssignmentProfileSchema = z.object({
+    lectureNumber:z.string(),
+    course:z.string(),
+    submissionDate:z.string(),
+    result:z.string(),
+})

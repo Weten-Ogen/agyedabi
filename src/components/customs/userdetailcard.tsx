@@ -27,14 +27,14 @@ const UserDetailCard = (props:userdetailcardprops) => {
         props.userDetail.vetted ?     
         <div className='w-full'>
         { props.userDetail.status === 'completed' ?
-        <Card className='shadow-lg bg-black text-white '>
+        <Card className='shadow-lg  '>
             <CardContent className='flex flex-col gap-4 p-4'>
                 <CardTitle className='uppercase text-sml'>
                       {AdminContent.homeContent.homeTexts.completed.title}
                 </CardTitle>
-                <CardDescription className='text-white font-poppins'>
+                <CardDescription className=' font-poppins'>
                     <div className='md:flex md:flex-col gap-2'>
-                    <Typoh4 className="capitalize font-poppins text-white text-sml">courses : </Typoh4>
+                    <Typoh4 className="capitalize font-poppins  text-sml">courses : </Typoh4>
                     <div>
 
                     {
@@ -42,7 +42,7 @@ const UserDetailCard = (props:userdetailcardprops) => {
                         <div className='flex gap-4 items-center'>
                             {props.userDetail.courses.map((item:string,i:number) => {
                                 return (
-                                    <Badge key={i} className="capitalize p-2 font-poppins text-white">{item}</Badge>
+                                    <Badge key={i} className="capitalize p-2 font-poppins ">{item}</Badge>
                                 )
                                 
                             })}
@@ -52,14 +52,14 @@ const UserDetailCard = (props:userdetailcardprops) => {
                     <CourseShowCardDiv
                         label='debt'
                         value={props.userDetail.debt as string}
-                        labelClass='text-white'
+                        labelClass=''
                         
                         className='flex gap-4 items-center  font-poppins'
                         />
                     <CourseShowCardDiv
                         label='tuition debt'
                         value={props.userDetail.tuition as string}
-                        labelClass='text-white'
+                        labelClass=''
                         className='flex gap-4 items-center font-poppins'
                         />
                     </div>
@@ -72,12 +72,12 @@ const UserDetailCard = (props:userdetailcardprops) => {
             </CardContent>
         </Card>:
         props.userDetail.status === 'ongoing' ?
-        <Card className='shadow-lg bg-black text-white'>
+        <Card className='shadow-lg '>
             <CardContent>
                 <CardTitle className='uppercase text-sml font-poppins'>
                       {AdminContent.homeContent.homeTexts.ongoing.title}
                 </CardTitle>
-                <CardDescription className='flex flex-col gap-4 text-white space-y-5'>
+                <CardDescription className='flex flex-col gap-4 space-y-5'>
                         <CourseShowCardDiv
                             label='debt'
                             value={props.userDetail.debt as string}
@@ -91,7 +91,7 @@ const UserDetailCard = (props:userdetailcardprops) => {
                             <div className='flex flex-wrap gap-4 items-center'>
                                 {props.userDetail.courses.map((item:string,i:number) => {
                                     return (
-                                        <Badge key={i} className="text-white text-sml p-2 capitalize">{item}</Badge>
+                                        <Badge key={i} className=" text-sml p-2 capitalize">{item}</Badge>
                                     )
                                     
                                 })}
@@ -107,7 +107,7 @@ const UserDetailCard = (props:userdetailcardprops) => {
                         <CourseShowCardDiv
                             label='group'
                             value={props.userDetail.group as string}
-                            valueClass='text-white font-poppins text-sml'
+                            valueClass=' font-poppins text-sml'
                         />
                         <CourseShowCardDiv
                             label='group assignment'
@@ -116,7 +116,7 @@ const UserDetailCard = (props:userdetailcardprops) => {
                         <CourseShowCardDiv
                             label='Vetted'
                             value={props.userDetail.vetted ? 'yes' : 'no' }
-                            valueClass={`${props.userDetail.vetted ? 'bg-green-500 text-white' : 'bg-red-500 text-white'} py-1 px-3 rounded-lg`}
+                            valueClass={`${props.userDetail.vetted ? 'bg-green-500 ' : 'bg-red-500 '} py-1 px-3 rounded-lg`}
                         />
                         <CourseShowCardDiv
                              value={props.userDetail.tuition as string}
@@ -134,12 +134,12 @@ const UserDetailCard = (props:userdetailcardprops) => {
         </Card>: 
         <Card className='w-full  bg-black shadow-xl '>
             <CardContent className='w-full flex flex-col gap-4'>
-                <CardTitle className='uppercase font-poppins text-sml text-white'>
+                <CardTitle className='uppercase font-poppins text-sml '>
                        {AdminContent.homeContent.homeTexts.unassigned.title}
                 </CardTitle>
-                <CardDescription className='flex flex-col gap-4 text-white  '>
+                <CardDescription className='flex flex-col gap-4   '>
                   <div className='flex flex-col  gap-4 py-5'>
-                  <Typop className='text-sml font-poppins tracking-wide text-white leading-6 text-justify bg-slate-800 p-4 '>
+                  <Typop className='text-sml font-poppins tracking-wide  leading-6 text-justify  p-4 '>
                     {AdminContent.homeContent.homeTexts.unassigned.text1}
                   </Typop>
                   <BtnLink 
@@ -149,7 +149,7 @@ const UserDetailCard = (props:userdetailcardprops) => {
                   />
                   </div>
                   <div className='flex flex-col py-5 gap-4'>
-                  <Typop className='font-poppins text-sml text-white tracking-wide leading-6 text-justify bg-slate-800 p-4 '>
+                  <Typop className='font-poppins text-sml tracking-wide leading-6 text-justify  p-4 '>
                   {AdminContent.homeContent.homeTexts.unassigned.text2}
                   </Typop>                 
                 
@@ -160,7 +160,7 @@ const UserDetailCard = (props:userdetailcardprops) => {
                    </div>
                    <div className='flex flex-col gap-4 py-5'>
 
-                    <Typop  className='text-sml font-poppins tracking-wide text-white leading-7 text-justify bg-slate-800 p-4'>
+                    <Typop  className='text-sml font-poppins tracking-wide  leading-7 text-justify  p-4'>
                        {AdminContent.homeContent.homeTexts.unassigned.text3}
                     </Typop>
                     <BtnLink
@@ -175,12 +175,12 @@ const UserDetailCard = (props:userdetailcardprops) => {
         }
     </div> :
     <div className='w-full'>
-        <Card className='shadow-lg bg-black'>
+        <Card className='shadow-lg '>
             <CardContent>
-                <CardTitle className='text-sml uppercase font-poppins text-white '>
+                <CardTitle className='text-sml uppercase font-poppins  '>
                     {AdminContent.homeContent.homeTexts.unvetted.title}
                 </CardTitle>
-                <CardDescription className='flex flex-col gap-4 text-white'>
+                <CardDescription className='flex flex-col gap-4 '>
                         <Typop className='text-foreground  font-poppins text-sml text-justify leading-6 tracking-wide py-5'>
                             {AdminContent.homeContent.homeTexts.unvetted.text}
                         </Typop>

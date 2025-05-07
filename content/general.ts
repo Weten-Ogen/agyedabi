@@ -170,3 +170,23 @@ export const fakeuser = {
              tuition:'2600',
              vetted:true,
 }
+
+
+export const fakenotice = [
+    {
+        id:'1',
+        message:'This is try Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet similique tenetur tempora. Voluptatibus officiis commodi saepe tempore repudiandae nesciunt voluptates!out ',
+        image: ""
+
+    },{
+        id:'2',
+        message: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet similique tenetur tempora. Voluptatibus officiis commodi saepe tempore repudiandae nesciunt voluptates!e",
+        image:''
+    },
+    {
+        id:"2",
+        message:' This istLorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet similique tenetur tempora. Voluptatibus officiis commodi saepe tempore repudiandae nesciunt voluptates!e',
+        image: ''
+    }
+
+]

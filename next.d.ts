@@ -36,3 +36,13 @@ interface courseprops {
     image:string,
     requirements:string[]
 }
+
+interface assignmentprops {
+    id:string,
+    lectureNumber:string,
+    course:string,
+    submissionDate:string,
+    question:string,
+    result:string,
+    createdAt:string,
+}

@@ -13,7 +13,7 @@ interface  homepageimageprops {
 
 const HomePageImage = (props:homepageimageprops) => {
   return (
-    <div className={cn('w-full relative h-[45vh]  bg-black/65  -z-30 overflow-hidden object-cotain',props.className)}>
+    <div className={cn('w-full relative h-[55vh]  bg-black/65  -z-30 overflow-hidden object-cotain',props.className)}>
         {
             props.imageUrl ?
             <Image

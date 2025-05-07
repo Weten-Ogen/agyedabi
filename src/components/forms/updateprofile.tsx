@@ -8,6 +8,7 @@ import { UserUpdateProfileSchema } from '.'
 import CustomUpdateFormField from './customupdateformfield'
 import { useForm } from 'react-hook-form'
 import { Button } from '../ui/button'
+import { Card, CardContent } from '../ui/card'
 
 interface updateprofileprops {
     className?:string,
@@ -32,9 +33,12 @@ const UpdateProfile = (props: updateprofileprops) => {
     })
 
     return (
-    <div className={cn('md:w-[80%] md:mx-auto  rounded-lg  bg-acc-color/70 text-pri-color',props.className)}>
+    <div className={cn('md:w-[80%] md:mx-auto    ',props.className)}>
         <Form  {...formSheme}>
-            <form className='space-y-5 p-4' >
+                <Card className='p-0'>
+                    <CardContent className='bg-acc-color/75 text-white p-4 rounded-lg'>
+
+            <form className='space-y-5 ' >
                 <CustomUpdateFormField
                     control={formSheme.control}
                     name='name'
@@ -82,6 +86,8 @@ const UpdateProfile = (props: updateprofileprops) => {
                 </Button>
               
             </form>
+                    </CardContent>
+                </Card>
         </Form>
     </div>
   )

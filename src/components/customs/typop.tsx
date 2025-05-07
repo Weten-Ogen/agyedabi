@@ -9,7 +9,7 @@ interface typoprops {
 }
 const Typop = (props:typoprops) => {
   return (
-    <p className={cn('  font-poppins ',props.className)}>
+    <p className={cn(' text-foreground font-poppins ',props.className)}>
         {props.children}
     </p>
   )

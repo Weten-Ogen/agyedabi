@@ -21,13 +21,13 @@ interface courseshowcardprops {
 }
 const CourseShowCard = (props:courseshowcardprops) => {
   return (
-    <div className='p-0 mb-10'>
+    <div className='w-600 md:w-auto'>
         <div className='p-0'>
         {
             
             props.id ?
             <Card className='w-full md:w-[25rem] md:h-auto md:overflow-hidden p-0'>
-            <CardContent className='rounded-lg md:w-[25rem] md:h-auto p-4 shadow-lg'>
+            <CardContent className=' md:w-[25rem]   '>
                 <div className='flex items-center gap-4'>
                     <div className='p-2'>
                        { 

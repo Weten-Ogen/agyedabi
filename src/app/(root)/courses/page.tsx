@@ -6,9 +6,9 @@ import CourseCard from '@/components/customs/coursecard'
 
 export default function Courses() {
   return (
-    <section className='w-full mt-10 py-4'>
+    <section className='w-full  mt-10'>
       <div
-        className='p-4 flex flex-col bg-sec-color text-white pb-5 gap-4'
+        className='p-4 flex flex-col  bg-acc-color h-[50vh] text-white py-10 gap-4'
       >
         <Typoh2 className='text-med font-poppins uppercase  lg:p-4'>
           {AdminContent.courseContent.courseinfo.heading}
@@ -18,7 +18,7 @@ export default function Courses() {
         </Typop>
 
       </div>
-      <div className='grid grid-cols-1 lg:grid-cols-3  items-start gap-4'>
+      <div className='grid grid-cols-1 lg:grid-cols-3  items-start  mt-8'>
         {AdminContent.courseContent.courselist.map((item:courseprops, i:number)=> {
           return (<CourseCard
               key={i}
