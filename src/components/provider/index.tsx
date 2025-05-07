@@ -1,8 +1,20 @@
 "use client"
 import React from 'react'
+import NavBar from '../customs/navbar'
 
-export default function index() {
+interface pageprops {
+  children : React.ReactNode
+}
+export default function Provider(props:pageprops) {
   return (
-    <div>index</div>
+  <div className='relative '>
+      <NavBar/>
+      <div className=''>
+
+      {
+        props.children
+      }
+      </div>
+    </div>
   )
 }

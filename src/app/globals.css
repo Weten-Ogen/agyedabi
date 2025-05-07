@@ -2,16 +2,17 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
-@theme {
+@theme{
   --font-poppins : var(--font-poppins);
-  --pri-color:oklch(1 0 0) ;
-  --sec-color:oklch(0.04 0 0) ;
-  --acc-color:oklch(0.7 0.1648 215.58);
-  --font-sml:0.8rem;
-  --font-med:1.2rem;
-  --font-lag:1.6rem; 
-  --font-xrl:1.8rem;
-  --font-xxrl:2.6rem;
+  --color-pri-color:oklch(1 0 0) ;
+  --color-sec-color:oklch(0.04 0 0) ;
+  --color-acc-color:oklch(0.7 0.1648 215.58);
+  --text-sml:0.96rem;
+  --text-smm:1.36rem;
+  --text-med:2.16rem;
+  --text-lag:3.36rem; 
+  --text-xrl:4.16rem;
+  --text-xxrl:5.26rem;
 }
 
 @theme inline {
