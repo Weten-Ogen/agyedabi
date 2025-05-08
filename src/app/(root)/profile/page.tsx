@@ -13,7 +13,17 @@ export default function Profile() {
     <section className='md:flex mt-20 md:mt-12 md:p-0   p-4'>
 
         <aside className='bg-acc-color h-screen hidden md:block lg:w-full'>
-
+          <div className='uppercase font-bold bg-clip-content text-black  flex flex-cols items-center justify-center  mt-70 italic  backdrop-blur-xl  starting-0 end-7 text-lag'>
+            <span className='text-red-600 font-bold'>
+                 <span className='animate-pulse transition-colors bg-black text-acc-color p-4 repeat-infinite ease-linear -skew-y-12 from-text-black to-text-white m-4 '>
+                    agye 
+                 </span>
+            </span>
+            <span className='text [6rem]'>.</span>
+            <span className='m-4 bg-white p-4 text-acc-color -skew-x-10 animate-pulse'>
+                dabi
+            </span>
+          </div>
         </aside>
           <Card className='w-full p-0'>
               <CardContent className='w-full p-4 flex flex-col gap-4'>

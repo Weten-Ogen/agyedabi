@@ -80,8 +80,8 @@ const UpdateProfile = (props: updateprofileprops) => {
                     name='arrears'
                     label='Monthly Debt'
                     placeholder=''
-                />
-                <Button className='text-white w-full bg-acc-color/80 p-4  shadow-lg  rounded-lg hover:duration-300 hover:ease-out hover:-translate-y-0.5 hover:bg-acc-color cursor-pointer hover:text-white '>
+               />
+                <Button className='text-white w-full bg-acc-color/80 p-4  shadow-lg  rounded-lg hover:duration-300 hover:ease-out hover:-translate-y-0.5 uppercase hover:bg-acc-color cursor-pointer hover:text-white '>
                     submit
                 </Button>
               
