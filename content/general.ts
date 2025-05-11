@@ -1,5 +1,121 @@
+import HeroAccordion from "@/components/customs/heroaccordion"
+import Hero from "@/components/hero/hero"
+import { Cog, Cpu, LampDesk, LayoutDashboard, Monitor } from "lucide-react"
 export const AdminContent = {
     appName:"agyedabi",
+    HeroAccordion:[
+        {
+            id:'1',
+            callToAction:'update profile',
+            content:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio excepturi velit facere asperiores blanditiis. Cum minus id recusandae ducimus ipsam. Facilis labore sint error dolorem. Temporary voluntate tenetur quo veritatis.',
+            href:"/profile/update/1",
+            title:"Have you update your profile Page?!!!!!!",
+            imageUrl:"/neural.jpg"
+         },
+         {
+            id:'2',
+            callToAction:'join course',
+            content:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio excepturi velit facere asperiores blanditiis. Cum minus id recusandae ducimus ipsam. Facilis labore sint error dolorem. Temporary voluntate tenetur quo veritatis.',
+            href:"/profile/course/1",
+            title:"Have join a course yet?!!!!!!",
+            imageUrl:"/neural.jpg"
+         },
+         {
+            id: '3',
+            callToAction:'make payment',
+            content:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio excepturi velit facere asperiores blanditiis. Cum minus id recusandae ducimus ipsam. Facilis labore sint error dolorem. Temporary voluntate tenetur quo veritatis.',
+            href:"/profile/profile/payment",
+            title:"Have you made your registration payment?",
+            imageUrl:"/neural.jpg"
+         },
+         {
+            id:'4',
+            callToAction:'contact us',
+            content:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio excepturi velit facere asperiores blanditiis. Cum minus id recusandae ducimus ipsam. Facilis labore sint error dolorem. Temporary voluntate tenetur quo veritatis.',
+            href:"/profile/help",
+            title:"Do you need help with any of this process",
+            imageUrl:"/neural.jpg"
+         }
+    ],
+    Herobilling: [
+        {
+            course: "Official Course",
+            description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate minus dolor error totam temporibus nesciunt ipsa amet. In, numquam? Quae?",
+            href:"/",
+            callToAction:"choose plan",
+            imageUrl:"/neural.jpg",
+            herolist:[
+                "Live Tutoring",
+                "Real Projects",
+                "Internship with Global Companies",
+                "Job Matching",
+                "A strong Community"
+            ]
+        },
+        {
+            course: "Rust Development",
+            description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate minus dolor error totam temporibus nesciunt ipsa amet. In, numquam? Quae?",
+            href:"/",
+            callToAction:"choose plan",
+            imageUrl:"/neural.jpg",
+            herolist:[
+                "Live Tutoring",
+                "Real Projects",
+                "Internship with Global Companies",
+                "Job Matching",
+                "A strong Community"
+            ]
+        },
+        {
+            course: "Legacy C / C++",
+            description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate minus dolor error totam temporibus nesciunt ipsa amet. In, numquam? Quae?",
+            href:"/",
+            callToAction:"choose plan",
+            imageUrl:"/neural.jpg",
+            herolist:[
+                "Live Tutoring",
+                "Real Projects",
+                "Internship with Global Companies",
+                "Job Matching",
+                "A strong Community"
+            ]
+        },
+    ],
+    heroContent:{
+        services:[
+            {
+                icon: Monitor,
+                label:"Live Tutoring",
+                content:"We offer you live tutoring and mentoring during the course of your study. We believe the best way to teach is the feel of reality .",
+            },
+            {
+                icon:LayoutDashboard,
+                label:"Perfect Scheduling",
+                content:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet similique tenetur tempora. Voluptatibus officiis commodi saepe tempore repudiandae nesciunt voluptates!e"
+            },
+            {
+                icon:LampDesk,
+                label:"Job Matching",
+                content:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet similique tenetur tempora. Voluptatibus officiis commodi saepe tempore repudiandae nesciunt voluptates!e"
+            },
+            {
+                icon:Cpu,
+                label:"Indept Programming",
+                content:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet similique tenetur tempora. Voluptatibus officiis commodi saepe tempore repudiandae nesciunt voluptates!e"
+            },
+            {
+                icon:Cog,
+                label:"Precise Tasking",
+                content:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet similique tenetur tempora. Voluptatibus officiis commodi saepe tempore repudiandae nesciunt voluptates!e"
+            },
+        ],
+            heroParagraph: "change the direction",
+            heroHeading: "the fasters way of becoming an experience software engineer.",
+            heroSubHeading:"We develop professionally experience software engineers equips for fullStack development roles. ",
+            heroImage:"https://ras5rd0eb4njkcel.public.blob.vercel-storage.com/brain-P3BgBADjpOE5fPlqI0RFRpgh0VHJz2.jpg",
+    
+        
+    },
     adminlinks : [
         {
             label: 'users',
@@ -38,13 +154,7 @@ export const AdminContent = {
             href:'/profile'
         }
     ],
-    heroContent: {
-        heroParagraph: "change the direction",
-        heroHeading: "the fasters way of becoming an experience software engineer.",
-        heroSubHeading:"We develop professionally experience software engineers equips for fullStack development roles. ",
-        heroImage:"https://ras5rd0eb4njkcel.public.blob.vercel-storage.com/brain-P3BgBADjpOE5fPlqI0RFRpgh0VHJz2.jpg",
-
-    },
+   
     homeContent: {
         homeImage:"https://ras5rd0eb4njkcel.public.blob.vercel-storage.com/brain-P3BgBADjpOE5fPlqI0RFRpgh0VHJz2.jpg",
         homeTexts:{
@@ -190,3 +300,89 @@ export const fakenotice = [
     }
 
 ]
+
+export const services = [
+    {
+      label:"courses",
+      href:'/courses'
+    },
+    {
+      label:'jobs',
+      href:"/jobs"
+    },
+    {
+      label:'profile',
+      href:"/profile"
+    }
+  ]
+  
+export   const information = [
+    {
+      label:"pricing",
+      href:'/courses'
+    },
+    {
+      label:'reviews',
+      href:"/reviews"
+    },
+    {
+      label:'referral program',
+      href:"/referrals"
+    }
+  ]
+  export const navigation = [
+        {
+          label:"courses",
+          href:'/courses'
+        },
+        {
+          label:'jobs',
+          href:"/jobs"
+        },
+        {
+          label:'profile',
+          href:"/profile"
+        }
+,      
+        {
+          label:"pricing",
+          href:'/courses'
+        },
+        {
+          label:'reviews',
+          href:"/reviews"
+        },
+        {
+          label:'referral program',
+          href:"/referrals"
+        }
+      ,
+        {
+          label:"matching",
+          href:'/match'
+        },
+        {
+          label:'jobs',
+          href:"/jobs"
+        },
+        {
+          label:'courses',
+          href:"/courses"
+        },
+      
+      
+  ]
+ export  const solutions = [
+    {
+      label:"matching",
+      href:'/match'
+    },
+    {
+      label:'jobs',
+      href:"/jobs"
+    },
+    {
+      label:'courses',
+      href:"/courses"
+    },
+  ]

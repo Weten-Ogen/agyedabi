@@ -3,6 +3,7 @@ import React from 'react'
 import { AdminContent } from '../../../../content/general'
 import CourseCarouselCard from '@/components/customs/Coursecarousel'
 import UserDetailCard from '@/components/customs/userdetailcard'
+import HeroFooter from '@/components/customs/herofooter'
 
 export default function Home() {
   return (
@@ -23,7 +24,7 @@ export default function Home() {
             group: '',
             id : '1',
             name: "Marcus gideon oware",
-            status:'ongoing',
+            status:'unassigned',
             userRole:'user',
             arrears:'50',
             assignment:'build a card component that has an animation of anything you like.',
@@ -44,7 +45,7 @@ export default function Home() {
           }
         }
       />
-    
+      <HeroFooter/>    
     </section>
   )
 }

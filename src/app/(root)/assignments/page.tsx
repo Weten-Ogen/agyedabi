@@ -16,6 +16,7 @@ export default function Assignments() {
         <AsssignmentDiv
           details={assign}
         />
+        
     </div>
   )
 }

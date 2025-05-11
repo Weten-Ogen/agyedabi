@@ -16,8 +16,9 @@ interface heroprops {
 }
 const Hero = (props: heroprops) => {
   return (
-    <div className={cn('relative w-full md:h-screen overflow-hidden',props.className)}>
-        <div className='max-w-full h-full bg-black/70'>
+    <div className={cn('relative w-full md:h-screen  overflow-hidden ',props.className)}>
+        <div className=' bg-black/80 w-full h-full'/>
+        <div className='max-w-full h-full '>
             <Image
                 src={props.heroImage}
                 alt={props.heroImage}
@@ -26,7 +27,9 @@ const Hero = (props: heroprops) => {
                 className='w-full h-screen object-cover'
             />
         </div>
-        <div className='absolute inset-0    flex justify-center p-4      text-pri-color flex-col gap-4 space-y-5  bg-black/40 w-full h-full'>
+        <div className='bg-black/80'>
+
+        <div className='absolute inset-0    flex justify-center p-4 md:w-[80%] md:mx-auto      text-pri-color flex-col gap-4 space-y-5   w-full h-full'>
             <Typoh2 className='uppercase max-w-2xl text-med text-left '>
                     {props.heading}
             </Typoh2>
@@ -36,6 +39,7 @@ const Hero = (props: heroprops) => {
             <TypoBtn className='bg-acc-color text-pri-color text-sml uppercase font-poppins hover:bg-pri-color hover:text-acc-color tracking-wider md:w-sm' href="/api/auth/callback/google">
                 join us
             </TypoBtn>
+        </div>
         </div>
 
     </div>

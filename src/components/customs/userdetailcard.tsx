@@ -8,6 +8,7 @@ import Typoh2 from './typoh2'
 import BtnLink from './btnlink'
 import { AdminContent } from '../../../content/general'
 import { Badge } from '../ui/badge'
+import AccordionComp from './accordioncomp'
 
 interface userdetailcardprops {
     className?:string,
@@ -16,7 +17,7 @@ interface userdetailcardprops {
 
 const UserDetailCard = (props:userdetailcardprops) => {
   return (
-    <div className='flex  flex-col gap-4 p-4 md:max-w-[75%] mt-20  md:mx-auto '>
+    <div className='flex  flex-col gap-4 p-4 md:max-w-[75%]   md:mx-auto '>
         <div className='p-4 flex flex-col gap-2'>
         <Typoh2 className='font-poppins text-sml  uppercase font-bold ' >{AdminContent.homeContent.homeTexts.heading}</Typoh2>
         <Typop className='text-sml text-foreground font-poppins text-left  leading-7 '>{AdminContent.homeContent.homeTexts.subheading}
@@ -130,46 +131,53 @@ const UserDetailCard = (props:userdetailcardprops) => {
                         label='go to course'
                         className='mt-5'
                     />
+                    <p></p>
             </CardContent>
         </Card>: 
-        <Card className='w-full  bg-black shadow-xl '>
+        <Card className='w-full shadow-xl '>
             <CardContent className='w-full flex flex-col gap-4'>
-                <CardTitle className='uppercase font-poppins text-sml '>
-                       {AdminContent.homeContent.homeTexts.unassigned.title}
-                </CardTitle>
-                <CardDescription className='flex flex-col gap-4   '>
-                  <div className='flex flex-col  gap-4 py-5'>
-                  <Typop className='text-sml font-poppins tracking-wide  leading-6 text-justify  p-4 '>
-                    {AdminContent.homeContent.homeTexts.unassigned.text1}
-                  </Typop>
-                  <BtnLink 
-                    href='/profile/update/1'
-                    label='update profile'
-
-                  />
-                  </div>
-                  <div className='flex flex-col py-5 gap-4'>
-                  <Typop className='font-poppins text-sml tracking-wide leading-6 text-justify  p-4 '>
-                  {AdminContent.homeContent.homeTexts.unassigned.text2}
-                  </Typop>                 
-                
-                    <BtnLink
-                        href='/profile/confirm'
-                        label='confirm payment'
-                        />
-                   </div>
-                   <div className='flex flex-col gap-4 py-5'>
-
-                    <Typop  className='text-sml font-poppins tracking-wide  leading-7 text-justify  p-4'>
-                       {AdminContent.homeContent.homeTexts.unassigned.text3}
-                    </Typop>
-                    <BtnLink
-                        href='/courses'
-                        label='register for a course'
-                    />
-                   </div>
-                </CardDescription>
-               
+               <AccordionComp
+                details={
+                    [
+                        {
+                            id:"1",
+                            href:"",
+                            title: 'How do i make payment?',
+                            content:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis ullam consequuntur, illo suscipit debitis nisi sequi placeat natus! Praesentium, consequuntur. Ad odit esse ratione accusamus deserunt vero aperiam qui iusto."
+                        },
+                        {
+                            id: "2",
+                            href:"",
+                            title:'How do i join a course?',
+                            content:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis ullam consequuntur, illo suscipit debitis nisi sequi placeat natus! Praesentium, consequuntur. Ad odit esse ratione accusamus deserunt vero aperiam qui iusto."
+                        },
+                        {
+                            id: '3',
+                            href:"",
+                            title:'How long does the course take ?',
+                            content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis ullam consequuntur, illo suscipit debitis nisi sequi placeat natus! Praesentium, consequuntur. Ad odit esse ratione accusamus deserunt vero aperiam qui iusto."
+                        },
+                        {
+                            id: '4',
+                            href:"",
+                            title:'How long does the course take ?',
+                            content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis ullam consequuntur, illo suscipit debitis nisi sequi placeat natus! Praesentium, consequuntur. Ad odit esse ratione accusamus deserunt vero aperiam qui iusto."
+                        },
+                        {
+                            id: '5',
+                            href:"",
+                            title:'How long does the course take ?',
+                            content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis ullam consequuntur, illo suscipit debitis nisi sequi placeat natus! Praesentium, consequuntur. Ad odit esse ratione accusamus deserunt vero aperiam qui iusto."
+                        },
+                        {
+                            id: '6',
+                            href:"",
+                            title:'How long does the course take ?',
+                            content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis ullam consequuntur, illo suscipit debitis nisi sequi placeat natus! Praesentium, consequuntur. Ad odit esse ratione accusamus deserunt vero aperiam qui iusto."
+                        },
+                    ]
+                }
+               />             
             </CardContent>
         </Card>
         }

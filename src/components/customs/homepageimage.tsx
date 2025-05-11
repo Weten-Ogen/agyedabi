@@ -13,7 +13,7 @@ interface  homepageimageprops {
 
 const HomePageImage = (props:homepageimageprops) => {
   return (
-    <div className={cn('w-full relative h-[55vh]  bg-black/65  -z-30 overflow-hidden object-cotain',props.className)}>
+    <div className={cn('w-full relative h-[50vh]  bg-black/65  -z-30 overflow-hidden object-cotain',props.className)}>
         {
             props.imageUrl ?
             <Image
@@ -21,7 +21,7 @@ const HomePageImage = (props:homepageimageprops) => {
             alt={props.imageUrl}
             width={1000}
             height={1000}
-            className='w-full h-full  md:h-auto md:object-fill '
+            className='w-full h-full  md:h-auto md:object-cover '
         />: 
         <Skeleton  
             className='w-full h-[45vh] bg-slate-400'

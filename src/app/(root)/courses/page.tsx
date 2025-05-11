@@ -3,6 +3,7 @@ import React from 'react'
 import { AdminContent } from '../../../../content/general'
 import Typop from '@/components/customs/typop'
 import CourseCard from '@/components/customs/coursecard'
+import HeroFooter from '@/components/customs/herofooter'
 
 export default function Courses() {
   return (
@@ -26,6 +27,7 @@ export default function Courses() {
           />)
         })}
       </div>
+      <HeroFooter/>
     </section>
   )
 }

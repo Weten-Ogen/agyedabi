@@ -5,6 +5,7 @@ import Typoh4 from '@/components/customs/typoh4';
 import Typop from '@/components/customs/typop';
 import BtnLink from '@/components/customs/btnlink';
 import { Card, CardContent, CardDescription } from '@/components/ui/card';
+import HeroFooter from '@/components/customs/herofooter';
 
 
 export default function Profile() {
@@ -13,14 +14,13 @@ export default function Profile() {
     <section className='md:flex mt-20 md:mt-12 md:p-0   p-4'>
 
         <aside className='bg-acc-color h-screen hidden md:block lg:w-full'>
-          <div className='uppercase font-bold bg-clip-content text-black  flex flex-cols items-center justify-center  mt-70 italic  backdrop-blur-xl  starting-0 end-7 text-lag'>
-            <span className='text-red-600 font-bold'>
-                 <span className='animate-pulse transition-colors bg-black text-acc-color p-4 repeat-infinite ease-linear -skew-y-12 from-text-black to-text-white m-4 '>
+          <div className='uppercase font-bold bg-clip-content text-black  flex flex-cols items-center justify-center  mt-70 italic  backdrop-blur-xl   text-lag'>
+                 <span className='animate-pulse transition-colors bg-black text-acc-color p-4 repeat-infinite ease-linear skew-x-10 from-text-black to-text-white m-4 '>
                     agye 
                  </span>
-            </span>
-            <span className='text [6rem]'>.</span>
-            <span className='m-4 bg-white p-4 text-acc-color -skew-x-10 animate-pulse'>
+            
+            <span className='text [6rem] animate-bounce duration-300 '>.</span>
+            <span className='m-4 bg-white p-4 text-acc-color -skew-x-16 animate-pulse'>
                 dabi
             </span>
           </div>
@@ -35,7 +35,7 @@ export default function Profile() {
             />
           <ProfileLabelDiv
             label='email'
-            valueClass='text-foreground'
+            valueClass='text-foreground lowercase '
             
             value={user.email}
             />
@@ -91,6 +91,7 @@ export default function Profile() {
 
           </CardContent>
       </Card>
+      <HeroFooter/> 
     </section>
   )
 }

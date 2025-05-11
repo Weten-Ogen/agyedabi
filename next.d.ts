@@ -46,3 +46,72 @@ interface assignmentprops {
     result:string,
     createdAt:string,
 }
+
+interface servicesprops {
+    label:string,
+    content:string,
+    icon:React.ReactElement
+
+}
+
+interface testimonialprops {
+    name:string,
+    imageUrl:string,
+    content:string,
+    href:string,
+    email:string,
+
+}
+
+interface aboutprops {
+    heading:string,
+    content:string,
+    imageUrl:string,
+    callToAction:string
+    href:string,
+}
+
+interface billingprops {
+    course:string,
+    description:string,
+    price:string,
+    imageUrl:string,
+    callToAction:string,
+    href:string,
+    herolist:string[]
+}
+
+interface requirementprops {
+    label:string,
+    icon:string,
+    callToAction:string,
+    Href:string,
+    content:string,
+}
+
+interface listprops {
+    label:string,
+
+}
+interface heroaccordprops {
+    id:string
+    title:string,
+    content:string,
+    callToAction?:string,
+    imageUrl?:string,
+    href:string,
+}
+
+interface jobpoolprops {
+    label:string,
+    content:string,
+    imageUrl:string,
+    callToAction:string,
+    href:string,
+}
+
+interface herofooterlinkprops {
+    label:string,
+    href:string,
+}
+

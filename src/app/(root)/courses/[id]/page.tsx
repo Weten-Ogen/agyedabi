@@ -5,6 +5,7 @@ import Typoh4 from '@/components/customs/typoh4'
 import CourseShowCardDiv from '@/components/customs/courseshowcarddiv'
 import CourseShowCardMapDiv from '@/components/customs/courseshowcardmapdiv'
 import { Card, CardContent } from '@/components/ui/card'
+import HeroFooter from '@/components/customs/herofooter'
 
 export default async function  page({params}:{params : Promise<{id: string}>}) {
     const {id} = await params;
@@ -53,7 +54,6 @@ export default async function  page({params}:{params : Promise<{id: string}>}) {
         </div>
             </CardContent>
         </Card>
-
     </section>
   )
 }
