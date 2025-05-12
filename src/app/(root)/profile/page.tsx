@@ -11,7 +11,9 @@ import HeroFooter from '@/components/customs/herofooter';
 export default function Profile() {
   const user = fakeuser;
   return (
-    <section className='md:flex mt-20 md:mt-12 md:p-0   p-4'>
+    <section className='
+     mt-20 md:mt-12 md:p-0   p-4'>
+        <div className='md:flex'>
 
         <aside className='bg-acc-color h-screen hidden md:block lg:w-full'>
           <div className='uppercase font-bold bg-clip-content text-black  flex flex-cols items-center justify-center  mt-70 italic  backdrop-blur-xl   text-lag'>
@@ -91,6 +93,7 @@ export default function Profile() {
 
           </CardContent>
       </Card>
+        </div>
       <HeroFooter/> 
     </section>
   )

@@ -1,0 +1,237 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/lib/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String          @id @default(cuid())
+  name          String?
+  country       String?
+  number        String?
+  address       String?
+  city          String?
+  occupation    String?
+  status        UserStatus      @default(UNASSIGNED)
+  contact       String?
+  profileImage  String?
+  email         String          @unique
+  emailVerified DateTime?
+  image         String?
+  bio           String?
+  accounts      Account[]
+  sessions      Session[]
+  // Optional for WebAuthn support
+  Authenticator Authenticator[]
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+  role          UserRole        @default(USER)
+  testimony     Testimonial?
+  reviews       Review[]
+  reports       Report[]
+  membership    Member[]
+  payments      Payment[]
+}
+
+model Account {
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  user              User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([provider, providerAccountId])
+}
+
+model Session {
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model VerificationToken {
+  identifier String
+  token      String
+  expires    DateTime
+
+  @@id([identifier, token])
+}
+
+// Optional for WebAuthn support
+model Authenticator {
+  credentialID         String  @unique
+  userId               String
+  providerAccountId    String
+  credentialPublicKey  String
+  counter              Int
+  credentialDeviceType String
+  credentialBackedUp   Boolean
+  transports           String?
+  user                 User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([userId, credentialID])
+}
+
+model Course {
+  id               String       @id @default(cuid())
+  name             String
+  registrationCost String
+  tuitionCost      String
+  timespan         String
+  lectureNumber    String
+  startDate        DateTime
+  endDate          DateTime
+  classSize        String
+  image            String
+  requirements     String[]
+  assignments      Assignment[]
+  createdAt        DateTime     @default(now())
+  updatedAt        DateTime     @updatedAt
+}
+
+model Assignment {
+  id             String   @id @default(cuid())
+  lectureNumber  String
+  submissionDate DateTime
+  question       String
+  answer         String
+  courseId       String
+  course         Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
+
+model Testimonial {
+  id        String   @id @default(cuid())
+  name      String
+  image     String
+  content   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  href      String
+  userId    String   @unique
+  user      User     @relation(fields: [userId], references: [id])
+}
+
+model Job {
+  id        String   @id @default(cuid())
+  name      String   @unique
+  image     String?
+  content   String
+  stack     String[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Question {
+  id        String   @id @default(cuid())
+  label     String
+  question  String
+  answer    String
+  options   Option[]
+  quizzId   String   @unique
+  quizz     Quizz    @relation(fields: [quizzId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Option {
+  label      String
+  questionId String   @unique
+  question   Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+}
+
+model Quizz {
+  id        String     @id @default(cuid())
+  name      String
+  question  Question[]
+  answer    String
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+}
+
+model Group {
+  id        String   @id @default(cuid())
+  name      String
+  members   Member[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Member {
+  memberId  String    @unique
+  role      GroupRole @default(FULLSTACK)
+  user      User      @relation(fields: [memberId], references: [id], onDelete: Cascade)
+  groupId   String    @unique
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  group     Group     @relation(fields: [groupId], references: [id], onDelete: Cascade)
+}
+
+model Review {
+  id        String   @id @default(cuid())
+  message   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  for       String
+  authorId  String   @unique
+  author    User     @relation(fields: [authorId], references: [id], onDelete: Cascade)
+}
+
+model Report {
+  id        String   @id @default(cuid())
+  report    String
+  userId    String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Payment {
+  id        String   @id @default(cuid())
+  method    String
+  amount    String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  senderId  String
+  sender    User     @relation(fields: [senderId], references: [id])
+}
+
+enum UserRole {
+  ADMIN
+  USER
+  BLOCKED
+  UNAUTHENTICATED
+  EMPLOYEE
+  CLIENT
+}
+
+enum GroupRole {
+  LEAD
+  FRONTEND
+  BACKEND
+  FULLSTACK
+}
+
+enum UserStatus {
+  COMPLETED
+  UNASSIGNED
+  ONGOING
+  UNVETTED
+}
