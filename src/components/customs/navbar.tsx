@@ -7,12 +7,17 @@ import NavBarLinks from './navbarlinks'
 import AdditionalNavlinks from './additionalnavlink'
 import { Router } from 'lucide-react'
 import { useRouter } from 'next/navigation'
+import { auth } from '@/lib/auth'
+import { useSession } from 'next-auth/react'
+import SignInBtn from './signinbtn'
 
 interface navbarprops {
   className?:string,
 
 }
 const NavBar = (props:navbarprops) => {
+  const session = useSession();
+  console.log(session)
   const router = useRouter()
   return (
     <div className={cn('flex items-end  px-6 md:px-8 py-2   w-full fixed inset-0 z-30 bg-white border  justify-between h-12 shadow-lg  ',props.className)}>
@@ -22,7 +27,16 @@ const NavBar = (props:navbarprops) => {
           </h4>
           <NavBarLinks/>
       </div>
-          <AdditionalNavlinks/>
+
+
+        <div>
+          {
+            !session.data?.user ? 
+            <AdditionalNavlinks/>
+            :
+            <SignInBtn/>
+          }
+        </div>
     </div>
   )
 }

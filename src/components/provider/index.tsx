@@ -1,6 +1,7 @@
 "use client"
 import React from 'react'
 import NavBar from '../customs/navbar'
+import { SessionProvider } from 'next-auth/react'
 
 interface pageprops {
   children : React.ReactNode
@@ -8,6 +9,8 @@ interface pageprops {
 export default function Provider(props:pageprops) {
   return (
   <div className='relative '>
+    <SessionProvider>
+    
       <NavBar/>
       <div className=''>
 
@@ -15,6 +18,7 @@ export default function Provider(props:pageprops) {
         props.children
       }
       </div>
+      </SessionProvider>
     </div>
   )
 }

@@ -21,6 +21,7 @@ const AdditionalNavlinks = (props:additionalnavlinksprops) => {
             className={` w-6 h-6 cursor-pointer hover:-translate-y-0.5 hover:text-acc-color hover:ease-out hover:duration-300 ${pathname === '/notifications' ? 'text-acc-color': 'text-foreground'}`}
         />
         <MobileMenu/>
+        
     </div>
   )
 }

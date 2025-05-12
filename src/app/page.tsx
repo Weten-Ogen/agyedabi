@@ -11,6 +11,7 @@ import { Cog, LayoutDashboard, Monitor, ShoppingBag } from "lucide-react";
 import HeroFooter from "@/components/customs/herofooter";
 
 export default function Cover() {
+   
   return (
      <section className="">
         <div className="w-full">

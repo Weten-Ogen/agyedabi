@@ -3,7 +3,7 @@ import { revalidatePath } from 'next/cache'
 import {prisma} from '../../lib/db'
 
 export async function getGroupById(id:string){
-    const user = await prisma.users.findOne({
+    const user = await prisma.user.findFirst({
         where: {
             id
         }
@@ -12,27 +12,15 @@ export async function getGroupById(id:string){
 }
 
 export async function updateGroupById(id:string) {
-    const user = await prisma.users.updateOne({
-        where:{
-            id
-        }
-    })
-    return user
+   
+   
 }
 
 export async function deleteGroupById(id:string) {
-    await prisma.users.deleteOne({
-        where:{
-            id
-        }
-    })
-    revalidatePath('/admin/users')
 }
 
 export async function deleteGroups(data:FormData) {
-    await prisma.users.deleteMany({
-    
-    })
+  
 }
 
 

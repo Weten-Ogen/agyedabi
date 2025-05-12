@@ -5,6 +5,7 @@ import { DropdownMenuLabel, DropdownMenuTrigger } from '@radix-ui/react-dropdown
 import { Menu } from 'lucide-react'
 import { AdminContent } from '../../../content/general'
 import Link from 'next/link'
+import SignOutBtn from './signoutbtn'
 
 const MobileMenu = () => {
   const [isOpen , setIsOpen] = useState(false)
@@ -37,6 +38,7 @@ const MobileMenu = () => {
                 )
               })
             }
+            <SignOutBtn/>
           </DropdownMenuContent>
         </DropdownMenu>
     </div>
