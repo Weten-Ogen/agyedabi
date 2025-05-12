@@ -2,7 +2,7 @@
 import { revalidatePath } from 'next/cache'
 import {prisma} from '../../lib/db'
 
-export async function getUserById(id:string){
+export async function getReviewById(id:string){
     const user = await prisma.users.findOne({
         where: {
             id
@@ -11,7 +11,7 @@ export async function getUserById(id:string){
     return user
 }
 
-export async function updateUserById(id:string) {
+export async function updateReviewById(id:string) {
     const user = await prisma.users.updateOne({
         where:{
             id
@@ -20,7 +20,7 @@ export async function updateUserById(id:string) {
     return user
 }
 
-export async function deleteUserById(id:string) {
+export async function deleteReviewById(id:string) {
     await prisma.users.deleteOne({
         where:{
             id
@@ -29,17 +29,17 @@ export async function deleteUserById(id:string) {
     revalidatePath('/admin/users')
 }
 
-export async function deleteUsers(data:FormData) {
+export async function deleteReviews(data:FormData) {
     await prisma.users.deleteMany({
     
     })
 }
 
 
-export async function updateUsers() {
+export async function updateRviews() {
 
 }
 
-export async function createUser () {
+export async function createReview () {
 
 }
