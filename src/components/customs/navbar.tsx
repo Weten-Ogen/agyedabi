@@ -31,7 +31,7 @@ const NavBar = (props:navbarprops) => {
 
         <div>
           {
-            !session.data?.user ? 
+            session.data?.user ? 
             <AdditionalNavlinks/>
             :
             <SignInBtn/>
