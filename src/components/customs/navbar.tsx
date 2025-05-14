@@ -17,7 +17,6 @@ interface navbarprops {
 }
 const NavBar = (props:navbarprops) => {
   const session = useSession();
-  console.log(session)
   const router = useRouter()
   return (
     <div className={cn('flex items-end  px-6 md:px-8 py-2   w-full fixed inset-0 z-30 bg-white border  justify-between h-12 shadow-lg  ',props.className)}>

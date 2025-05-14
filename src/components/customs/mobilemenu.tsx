@@ -6,6 +6,8 @@ import { Menu } from 'lucide-react'
 import { AdminContent } from '../../../content/general'
 import Link from 'next/link'
 import SignOutBtn from './signoutbtn'
+import { Avatar, AvatarImage } from '../ui/avatar'
+import { useSession } from 'next-auth/react'
 
 const MobileMenu = () => {
   const [isOpen , setIsOpen] = useState(false)
@@ -13,14 +15,24 @@ const MobileMenu = () => {
     setIsOpen(prev => !prev)
 
   }
+  const session = useSession();
 
   return (
+
     <div className=''>
         <DropdownMenu onOpenChange={handleClick} defaultOpen={isOpen} >
           <DropdownMenuTrigger asChild>
                 <Menu  className='text-sec-color hover:text-acc-color '/>
           </DropdownMenuTrigger>
-          <DropdownMenuContent  className='relative right-8'>
+          <DropdownMenuContent  className='relative right-8 p-4 md:p-0'>
+            {
+              session.data?.user?.image  &&
+             <Avatar>
+              <AvatarImage 
+              alt={session.data?.user?.name as string}
+              src={session.data?.user?.image}/>
+            </Avatar>}
+            
             {
               AdminContent.navbarlinks.map((item:any,i:number) => {
                 return (
@@ -39,6 +51,7 @@ const MobileMenu = () => {
               })
             }
             <SignOutBtn/>
+            
           </DropdownMenuContent>
         </DropdownMenu>
     </div>
