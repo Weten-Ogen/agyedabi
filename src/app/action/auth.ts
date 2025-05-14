@@ -2,7 +2,8 @@
 import { signIn, signOut } from "@/lib/auth";
 
 export async function Login () {
-    await signIn()
+    await signIn(
+    )
 }
 
 export async function LogOut() {
