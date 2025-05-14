@@ -12,6 +12,7 @@ interface aboutusprops {
 }
 
 const AboutUs = (props:aboutusprops) => {
+    
   return (
     <div className={cn(' md:w-[80%] md:mx-auto p-4 py-20',props.className)}>
         <Card className='p-0 shadow-xl'>

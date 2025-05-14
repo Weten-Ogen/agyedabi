@@ -1,7 +1,14 @@
 import AsssignmentDiv from '@/components/customs/assignmentdiv'
+import { auth, signIn } from '@/lib/auth'
+import { redirect } from 'next/navigation'
 import React from 'react'
 
-export default function Assignments() {
+
+export default async function Assignments() {
+   const session = await auth()
+    if(!session) {
+     await signIn()
+    }
   const assign  = {
     id: "2",
     lectureNumber: "10",

@@ -13,7 +13,7 @@ const HeroBilling = (props:herobillingprops) => {
   return (
     <div className={cn('w-full   ',props.className)}>
       <Card className='p-0 bg-acc-color shadow-xl '>
-        <CardContent className='bg-white rounded-t-2xl rounded-lg flex flex-col gap-4 mt-14 p-4'>
+        <CardContent className='bg-white rounded-t-2xl rounded-lg flex flex-col gap-4 mt-10 p-4'>
             <CardTitle className='text-sml tracking-wide leading-6 uppercase font-bold'>
                 {props.details.course}
             </CardTitle>

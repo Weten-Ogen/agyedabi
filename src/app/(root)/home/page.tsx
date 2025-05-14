@@ -4,8 +4,16 @@ import { AdminContent } from '../../../../content/general'
 import CourseCarouselCard from '@/components/customs/Coursecarousel'
 import UserDetailCard from '@/components/customs/userdetailcard'
 import HeroFooter from '@/components/customs/herofooter'
+import { auth, signIn } from '@/lib/auth'
+import { redirect } from 'next/navigation'
 
-export default function Home() {
+
+export default async function Home() {
+  const session = await auth()
+  if(!session) {
+    await signIn()
+    
+  }
   return (
     <section className='relative w-full max-w-full'>
       <HomePageImage

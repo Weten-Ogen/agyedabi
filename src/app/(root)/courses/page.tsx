@@ -4,8 +4,15 @@ import { AdminContent } from '../../../../content/general'
 import Typop from '@/components/customs/typop'
 import CourseCard from '@/components/customs/coursecard'
 import HeroFooter from '@/components/customs/herofooter'
+import { redirect } from 'next/navigation'
+import { auth, signIn } from '@/lib/auth'
 
-export default function Courses() {
+
+export default async function Courses() {
+   const session = await auth()
+    if(!session) {
+     await signIn()
+    }
   return (
     <section className='w-full  mt-10'>
       <div

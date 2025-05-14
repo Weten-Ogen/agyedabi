@@ -12,7 +12,7 @@ interface herolistprops{
 const HeroList = (props:herolistprops) => {
   return (
     <div className={cn('',props.details)}>
-    <div className='flex flex-col gap-8 p-4'>
+    <div className='flex flex-col gap-8 '>
             {props.details && props.details.map((item:any, i:number) => {
                 return(
                     <HeroListItem key={i} detail={item} />

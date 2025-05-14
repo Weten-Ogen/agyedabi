@@ -118,7 +118,7 @@ export default function Cover() {
                      className=""
                      details={{
                         callToAction:"contact us",
-                        content:'we are an online platform that trains people to become experience developers. We used experience because during the process of your study , we match you with real companies and you contribute to build a profile of an experience developer . We also help aid you get a US Job if possible or applicable. if you are not into offshoring . we will aid you in your local area gig applications.',
+                        content:"At Agyedabi, we're on a mission to  equip 26,000 Africans with in-demand skills  by the end of 2027. Our goal is to empower individuals to solve their own technical challenges and create opportunities for themselves.Whether  through freelancing, enterpreneurship  or employment. By making practical, modern education  accessible  and affordable, we aim to fight poverty at it's root and help build a self-reliant, skill generation across the continent.",
                         heading:'about us',
                         href:'/about',
                         imageUrl:"/neural.jpg",

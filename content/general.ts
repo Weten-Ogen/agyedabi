@@ -7,7 +7,7 @@ export const AdminContent = {
         {
             id:'1',
             callToAction:'update profile',
-            content:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio excepturi velit facere asperiores blanditiis. Cum minus id recusandae ducimus ipsam. Facilis labore sint error dolorem. Temporary voluntate tenetur quo veritatis.',
+            content:'Welcome to Agyedabi! After signing up , the first step is to update your profile with accurate details. This helps us understand your background and connect you to the right learning path. Your  updated profile also boost your chances of landing a gig after after the bootcamp. Make sure your information is complete so we can  supoprt you every step of the way.',
             href:"/profile/update/1",
             title:"Have you update your profile Page?!!!!!!",
             imageUrl:"/neural.jpg"
@@ -15,23 +15,23 @@ export const AdminContent = {
          {
             id:'2',
             callToAction:'join course',
-            content:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio excepturi velit facere asperiores blanditiis. Cum minus id recusandae ducimus ipsam. Facilis labore sint error dolorem. Temporary voluntate tenetur quo veritatis.',
+            content:"To get started , you'll need to register  by paying a small fee- some courses may cost less ,but the official full program has  $100 regitrational fee. While you're welcome  to explore other options, we strongly recommend taking our offical course if you want us to help you get land a tech gig  afterwards. It's designed  to give you  the skills , mentorship, and real-world experience needed to succeed .Plus, we only collect the full tuition after you've secured a job- so there's no upfront risk.",
             href:"/profile/course/1",
-            title:"Have join a course yet?!!!!!!",
+            title:"What do i need to do after updating my profile page ?",
             imageUrl:"/neural.jpg"
          },
          {
             id: '3',
             callToAction:'make payment',
-            content:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio excepturi velit facere asperiores blanditiis. Cum minus id recusandae ducimus ipsam. Facilis labore sint error dolorem. Temporary voluntate tenetur quo veritatis.',
+            content:'All payments  for our service must be made strictly through  the official  Agyedabi  app. Do not send money through any third-party platforms , links or individuals.if you receive a payment  request  or a link  claiming to  represent us . Please search for Agyedabi on Google  and only use the official link that leads to  our  app or website. We will not be responsible for any loss.',
             href:"/profile/profile/payment",
-            title:"Have you made your registration payment?",
+            title:"What of the payments and how to go about it?",
             imageUrl:"/neural.jpg"
          },
          {
             id:'4',
             callToAction:'contact us',
-            content:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio excepturi velit facere asperiores blanditiis. Cum minus id recusandae ducimus ipsam. Facilis labore sint error dolorem. Temporary voluntate tenetur quo veritatis.',
+            content:'For any inquiries, please contact Agyedabi through the Help link on our chanels. We are here to help you change the Direction .',
             href:"/profile/help",
             title:"Do you need help with any of this process",
             imageUrl:"/neural.jpg"
@@ -40,44 +40,50 @@ export const AdminContent = {
     Herobilling: [
         {
             course: "Official Course",
-            description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate minus dolor error totam temporibus nesciunt ipsa amet. In, numquam? Quae?",
+            description:"Our official course on Agyedabi teaches programming with a highly professional and pratical approach , making it exciting and accessible for everyone- regardless of  background or experience . With hands-on projects, and real-world internships, we turn coding into a skill you'll enjoy  learning and confidently applying. All  are welcome . ",
             href:"/",
             callToAction:"choose plan",
             imageUrl:"/neural.jpg",
             herolist:[
-                "Live Tutoring",
+                "Professional Experience",
                 "Real Projects",
                 "Internship with Global Companies",
-                "Job Matching",
-                "A strong Community"
+                "Career guidance",
+                "Skill Mastery",
+                "Strong community",
+                "profile building",
+                "job lookups"
             ]
         },
         {
             course: "Rust Development",
-            description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate minus dolor error totam temporibus nesciunt ipsa amet. In, numquam? Quae?",
+            description:"Master Rust with our professional and hands-on course on Agyedabi-built for anyone who wants to write fast, safe  and modern code. Whether you're  a beginner or upgrading  your skills, this course makes systems programming exciting, pratical and future-ready . We recommend you first take our official course. This is for experience developers.",
             href:"/",
             callToAction:"choose plan",
             imageUrl:"/neural.jpg",
             herolist:[
                 "Live Tutoring",
                 "Real Projects",
-                "Internship with Global Companies",
-                "Job Matching",
-                "A strong Community"
+                "A strong Community",
+                "profile building",
+                "career growth",
+                
             ]
         },
         {
             course: "Legacy C / C++",
-            description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate minus dolor error totam temporibus nesciunt ipsa amet. In, numquam? Quae?",
+            description:"Dive into the foundations of programming  with our Legacy Course on Agyedabi, focusing on C and C++ . This course offers a deep, pratical understanding of low-level programming, giving you full control over how software works. perfect for aspiring engineers,system developers, and tech enthusiasts. This course require  some prior knowledge of programming . We highly recommend to take our official Course first.",
             href:"/",
             callToAction:"choose plan",
             imageUrl:"/neural.jpg",
             herolist:[
                 "Live Tutoring",
                 "Real Projects",
-                "Internship with Global Companies",
-                "Job Matching",
-                "A strong Community"
+                "System thinking",
+                "Memory Control",
+                "Profile Building",
+                "Strong community",
+                "Career pathways"
             ]
         },
     ],
@@ -86,32 +92,32 @@ export const AdminContent = {
             {
                 icon: Monitor,
                 label:"Live Tutoring",
-                content:"We offer you live tutoring and mentoring during the course of your study. We believe the best way to teach is the feel of reality .",
+                content:"Offers real-time tutoring and mentoring during studies, focusing on pratical, experience-based learning to enhance understanding.",
             },
             {
                 icon:LayoutDashboard,
                 label:"Perfect Scheduling",
-                content:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet similique tenetur tempora. Voluptatibus officiis commodi saepe tempore repudiandae nesciunt voluptates!e"
+                content:"Organizes study time efficiently to ensure balanced  and productive learning ."
             },
             {
                 icon:LampDesk,
                 label:"Job Matching",
-                content:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet similique tenetur tempora. Voluptatibus officiis commodi saepe tempore repudiandae nesciunt voluptates!e"
+                content:"Help people who complete our courses connects  to jobs that fit their skills and learning paths."
             },
             {
                 icon:Cpu,
                 label:"Indept Programming",
-                content:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet similique tenetur tempora. Voluptatibus officiis commodi saepe tempore repudiandae nesciunt voluptates!e"
+                content:"Thorough and detailed programming instruction to build strong coding skills."
             },
             {
                 icon:Cog,
                 label:"Precise Tasking",
-                content:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet similique tenetur tempora. Voluptatibus officiis commodi saepe tempore repudiandae nesciunt voluptates!e"
+                content:"We have perfect roles and tasks that shapes your experience professional enhancing your thinking  and developments as an aspiring developer."
             },
         ],
             heroParagraph: "change the direction",
-            heroHeading: "the fasters way of becoming an experience software engineer.",
-            heroSubHeading:"We develop professionally experience software engineers equips for fullStack development roles. ",
+            heroHeading: "grow your skills, land gigs, launch Startups. Pay us when you win.",
+            heroSubHeading:"Agyedabi helps you grow your skills, find gigs or launch a startup with minimal upfront costs. We only charge when you succeed, making it easier to build your  future with confidence.",
             heroImage:"https://ras5rd0eb4njkcel.public.blob.vercel-storage.com/brain-P3BgBADjpOE5fPlqI0RFRpgh0VHJz2.jpg",
     
         

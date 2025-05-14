@@ -6,9 +6,16 @@ import Typop from '@/components/customs/typop';
 import BtnLink from '@/components/customs/btnlink';
 import { Card, CardContent, CardDescription } from '@/components/ui/card';
 import HeroFooter from '@/components/customs/herofooter';
+import { auth, signIn } from '@/lib/auth';
+import { redirect } from 'next/navigation';
 
 
-export default function Profile() {
+
+export default async function Profile() {
+   const session = await auth()
+    if(!session) {
+      await signIn()
+    }
   const user = fakeuser;
   return (
     <section className='
