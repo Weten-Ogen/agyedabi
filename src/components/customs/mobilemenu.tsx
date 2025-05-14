@@ -24,14 +24,17 @@ const MobileMenu = () => {
           <DropdownMenuTrigger asChild>
                 <Menu  className='text-sec-color hover:text-acc-color '/>
           </DropdownMenuTrigger>
-          <DropdownMenuContent  className='relative right-8 p-4 md:p-0'>
+          <DropdownMenuContent  className='relative right-8 p-4  md:p-0'>
+            <div className='p-4'>
+
             {
               session.data?.user?.image  &&
-             <Avatar>
+              <Avatar>
               <AvatarImage 
               alt={session.data?.user?.name as string}
               src={session.data?.user?.image}/>
             </Avatar>}
+            </div>
             
             {
               AdminContent.navbarlinks.map((item:any,i:number) => {
