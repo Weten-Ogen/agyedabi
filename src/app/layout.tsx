@@ -11,8 +11,8 @@ const poppins = Poppins ({
 })
 
 export const metadata: Metadata = {
-  title: "Agyedabi | Change The Direction.",
-  description: "Agyedabi is a bootcamp and also a gig at those who are seeking to break into the technology space. we offer you with high end demand course and get you a gig afterwards. You will be required to pay us back our tuition fee once the deed is done.",
+  title: "Agyedabi | The future tells it all.",
+  description: "Agyedabi is a tech-focused bootcamp and gig platform that helps aspiring professionals launch their careers. We offer high-demand courses and connect graduates with real job opportunities. Payment is deferred until you secure a role.",
 };
 
 export default function RootLayout({

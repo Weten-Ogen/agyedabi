@@ -26,7 +26,6 @@ const MobileMenu = () => {
           </DropdownMenuTrigger>
           <DropdownMenuContent  className='relative right-8 p-4  md:p-0'>
             <div className='p-4'>
-
             {
               session.data?.user?.image  &&
               <Avatar>
