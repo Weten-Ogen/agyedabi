@@ -17,17 +17,17 @@ interface heroprops {
 const Hero = (props: heroprops) => {
   return (
     <div className={cn('relative w-full md:h-screen  overflow-hidden ',props.className)}>
-        <div className=' bg-black/80 w-full h-full'/>
-        <div className='max-w-full h-full '>
+        <div className='bg-black/70 w-full h-full'/>
+        <div className='max-w-full w-full h-full '>
             <Image
                 src={props.heroImage}
                 alt={props.heroImage}
-                width={500}
+                width={1000}
                 height={500}
                 className='w-full h-screen object-cover'
             />
         </div>
-        <div className='bg-black/80'>
+        <div className='bg-black/50'>
 
         <div className='absolute inset-0    flex justify-center p-4 md:w-[80%] md:mx-auto      text-pri-color flex-col gap-4 space-y-5   w-full h-full'>
             <Typoh2 className='uppercase max-w-2xl text-med text-left '>

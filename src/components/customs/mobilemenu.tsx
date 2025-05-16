@@ -19,13 +19,13 @@ const MobileMenu = () => {
 
   return (
 
-    <div className=''>
+    <div className='w-full'>
         <DropdownMenu onOpenChange={handleClick} defaultOpen={isOpen} >
           <DropdownMenuTrigger asChild>
                 <Menu  className='text-sec-color hover:text-acc-color '/>
           </DropdownMenuTrigger>
-          <DropdownMenuContent  className='relative right-8 p-4  md:p-0'>
-            <div className='p-4'>
+          <DropdownMenuContent  className='relative right-8 p-2 w-full  md:p-0'>
+            <div className='p-2'>
             {
               session.data?.user?.image  &&
               <Avatar>
@@ -34,14 +34,15 @@ const MobileMenu = () => {
               src={session.data?.user?.image}/>
             </Avatar>}
             </div>
-            
+            <div className='flex flex-col  gap-2 p-4'>
+
             {
               AdminContent.navbarlinks.map((item:any,i:number) => {
                 return (
                   
-              <DropdownMenuItem className='text-acc-color text-sml font-poppins' key={i} >
+                  <DropdownMenuItem className='text-acc-color text-sml p-0 font-poppins' key={i} >
 
-                <DropdownMenuLabel  className='hover:bg-acc-color w-full rounded-lg hover:text-white p-2  font-poppins'>
+                <DropdownMenuLabel  className='hover:bg-acc-color w-full rounded-lg hover:text-white  p-2 font-poppins'>
                   <Link onClick={handleClick} className='w-full text-sml capitalize font-poppins' href={item.href}>
                      {item.label}
                   </Link>
@@ -52,6 +53,7 @@ const MobileMenu = () => {
                 )
               })
             }
+          </div>
             <SignOutBtn/>
             
           </DropdownMenuContent>

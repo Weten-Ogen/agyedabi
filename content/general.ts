@@ -1,5 +1,4 @@
-import HeroAccordion from "@/components/customs/heroaccordion"
-import Hero from "@/components/hero/hero"
+
 import { Cog, Cpu, LampDesk, LayoutDashboard, Monitor } from "lucide-react"
 export const AdminContent = {
     appName:"agyedabi",
@@ -118,7 +117,7 @@ export const AdminContent = {
             heroParagraph: "change the direction",
             heroHeading: "grow your skills, land gigs, launch Startups. Pay us when you win.",
             heroSubHeading:"Agyedabi helps you grow your skills, find gigs or launch a startup with minimal upfront costs. We only charge when you succeed, making it easier to build your  future with confidence.",
-            heroImage:"https://ras5rd0eb4njkcel.public.blob.vercel-storage.com/brain-P3BgBADjpOE5fPlqI0RFRpgh0VHJz2.jpg",
+            heroImage:"https://ras5rd0eb4njkcel.public.blob.vercel-storage.com/ai-6e7u775qUrTRoU33SSMHlVH4W9J2qb.jpg",
     
         
     },
@@ -162,7 +161,7 @@ export const AdminContent = {
     ],
    
     homeContent: {
-        homeImage:"https://ras5rd0eb4njkcel.public.blob.vercel-storage.com/brain-P3BgBADjpOE5fPlqI0RFRpgh0VHJz2.jpg",
+        homeImage:"https://ras5rd0eb4njkcel.public.blob.vercel-storage.com/ai-6e7u775qUrTRoU33SSMHlVH4W9J2qb.jpg",
         homeTexts:{
             heading: "Do not make any payment, if you are not vetted .",
             subheading:"We have a two factor verification for payments systems. You will need to first message the Admin. Then update confirm payment section afterwards.",
