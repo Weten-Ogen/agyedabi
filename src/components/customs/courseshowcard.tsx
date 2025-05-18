@@ -5,6 +5,7 @@ import CourseShowCardDiv from './courseshowcarddiv'
 import { Skeleton } from '../ui/skeleton'
 import Image from 'next/image'
 import BtnLink from './btnlink'
+import { cn } from '@/lib/utils'
 
 interface courseshowcardprops {
         id:string,
@@ -17,17 +18,18 @@ interface courseshowcardprops {
         endDate:string,
         classSize:string,
         image:string,
-        requirements:string[]
+        requirements:string[],
+        className?:string
 }
 const CourseShowCard = (props:courseshowcardprops) => {
   return (
-    <div className='w-600 md:w-auto'>
+    <div className={cn('',props.className)}>
         <div className='p-0'>
         {
             
             props.id ?
-            <Card className='w-full md:w-[25rem] md:h-auto md:overflow-hidden p-0'>
-            <CardContent className=' md:w-[25rem]   '>
+            <Card className='p-0'>
+            <CardContent className=' '>
                 <div className='flex items-center gap-4'>
                     <div className='p-2'>
                        { 

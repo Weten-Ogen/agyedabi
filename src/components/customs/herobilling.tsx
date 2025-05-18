@@ -12,25 +12,25 @@ interface herobillingprops {
 const HeroBilling = (props:herobillingprops) => {
   return (
     <div className={cn('w-full   ',props.className)}>
-      <Card className='p-0 bg-acc-color shadow-xl '>
-        <CardContent className='bg-white rounded-t-2xl rounded-lg flex flex-col gap-4 mt-10 p-4'>
-            <CardTitle className='text-sml tracking-wide leading-6 uppercase font-bold'>
+      <Card className='p-0 bg-acc-color shadow-xl md:h-[120vh]'>
+        <CardContent className='bg-white rounded-t-lg rounded-lg h-full flex flex-col gap-8 mt-6 p-2'>
+            <CardTitle className='text-smm text-center tracking-wide leading-6 uppercase font-bold'>
                 {props.details.course}
             </CardTitle>
             
-            <CardDescription className='py-2 leading-7'>
+            <CardDescription className=' leading-7 md:h-[30vh]'>
               {props.details.description}
             </CardDescription>
             <BtnLink
               href={props.details.href}
               label={props.details.callToAction}
-              className="text-white"
+              className="text-white tracking-wide font-bold"
             />
             <div
-              className="h-[2px] w-full rounded-lg bg-slate-100 my-4"
+              className="h-[2px] w-full rounded-lg bg-slate-100 "
             />
             <HeroList
-              className='py-0 px-6'
+              className=''
               details={props.details.herolist}
             />
 

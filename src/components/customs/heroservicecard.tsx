@@ -10,13 +10,13 @@ interface heroserviceprops {
 
 const HeroServiceCard = (props:heroserviceprops) => {
   return (
-    <div className={cn('w-full ',props.className)}>
-      <Card className='shadow-xl'>
-        <CardContent className=' flex flex-col gap-4 '>
+    <div className={cn('w-full rounded-sml ',props.className)}>
+      <Card className='shadow-xl w-full h-[40vh] rounded-sml'>
+        <CardContent className=' flex flex-col gap-6 h-full rounded-sml '>
             <div className='bg-acc-color p-4 rounded-lg max-w-14 text-white inline-block '>
               {props.details.icon}
             </div>
-            <CardTitle className='text-smm capitalize '>{props.details.label}</CardTitle>
+            <CardTitle className='text-smm uppercase tracking-wide font-bold '>{props.details.label}</CardTitle>
             <CardDescription className='text-sml'>{props.details.content}</CardDescription>
         </CardContent>
       </Card>

@@ -4,11 +4,7 @@ import "./globals.css";
 import Provider from "@/components/provider";
 import { Toaster } from "sonner";
 
-const poppins = Poppins ({
-  variable: "--font-poppins",
-  subsets: ['latin'],
-  weight:['100','300','500','700','900'], 
-})
+const poppins = Poppins({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata: Metadata = {
   title: "Agyedabi | The future tells it all.",
@@ -23,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`font-poppins  antialiased`}
+        className={`font-poppins  antialiased ${poppins.className}`}
       >
         <Toaster 
           richColors

@@ -8,7 +8,7 @@ export const AdminContent = {
             callToAction:'update profile',
             content:'Welcome to Agyedabi! After signing up , the first step is to update your profile with accurate details. This helps us understand your background and connect you to the right learning path. Your  updated profile also boost your chances of landing a gig after after the bootcamp. Make sure your information is complete so we can  supoprt you every step of the way.',
             href:"/profile/update/1",
-            title:"Have you update your profile Page?!!!!!!",
+            title:"Have you update your profile Page ?",
             imageUrl:"/neural.jpg"
          },
          {
@@ -34,7 +34,15 @@ export const AdminContent = {
             href:"/profile/help",
             title:"Do you need help with any of this process",
             imageUrl:"/neural.jpg"
-         }
+         },
+         {
+            id: '5',
+            callToAction:'',
+            content:'Agyedabi is not a School. It a shop that offer you skills and helps you get a gig. The registration cost is  neccessary the communication to us that you are willing to buy a slot for the course.As we would wish to teach everyone at the same time but we can not . We more into quality over quantity.The money is also used to make some initial preparations for the process.',
+            href:"/profile/profile/payment",
+            title:"Why do I make need to make registrations payments two weeks before start date ?",
+           
+         },
     ],
     Herobilling: [
         {

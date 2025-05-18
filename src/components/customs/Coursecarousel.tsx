@@ -25,26 +25,28 @@ interface coursecarouselcardprops {
 }
 const CourseCarouselCard = (props:coursecarouselcardprops ) => {
   return (
-    <div className={cn("md:w-[70%] w-[80%] h-[30vh] md:h-[20vh]  relative -top-8 z-10 mx-auto",props.className)}>
-        <Carousel orientation='horizontal'  >
-            <CarouselContent   className='w-1/3 md:w-2/3 lg:w-3/4'>
-                <CarouselItem className={cn('flex  items-start  gap-8',props.className)}>
+    <div className={cn(" relative  w-[80%] mx-auto ",props.className)}>
+        <Carousel orientation='horizontal'  className=''>
+            <CarouselPrevious     
+                className='  gap-10 hidden md:flex absolute cursor-pointer z-20 text-white  bg-acc-color  p-2 text-lag'
+            />
+            <CarouselContent    className='w-1/3 md:w-2/3 lg:w-3/6'>
                         {props.data.map((item:courseprops,i:number) => {
-                            return <CourseShowCard
-                                    key={i}
+                            return (<CarouselItem key={i} className='p-4' >
+                             <CourseShowCard
                                     {...item}
-                                 
+                                 className=""
                             />
-                        })}
 
-                </CarouselItem>
+                        </CarouselItem>)
+                            })
+                    }
+
                
 
             </CarouselContent>
-                <CarouselPrevious  
-                    
-                />
                 <CarouselNext
+                    className='z-20 hidden md:flex gap-10 absolute  cursor-pointer text-white  bg-acc-color  p-2 text-lag'
                 />
         </Carousel>
     </div>

@@ -5,24 +5,24 @@ import CourseCarouselCard from '@/components/customs/Coursecarousel'
 import UserDetailCard from '@/components/customs/userdetailcard'
 import HeroFooter from '@/components/customs/herofooter'
 import { auth, signIn } from '@/lib/auth'
-import { redirect } from 'next/navigation'
 
 
 export default async function Home() {
   const session = await auth()
-  if(!session) {
-    await signIn()
+  // if(!session) {
+  //   await signIn()
     
-  }
+  // }
+
   return (
-    <section className='relative w-full max-w-full'>
+    <section className='relative -z-10 w-full max-w-full'>
       <HomePageImage
         imageUrl={AdminContent.homeContent.homeImage}
         className=''
       />
       <CourseCarouselCard
         data={AdminContent.courseContent.courselist}
-        className=''
+        className='md:-top-12'
        />
       <UserDetailCard
         userDetail={
