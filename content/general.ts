@@ -240,32 +240,6 @@ export const AdminContent = {
                         classSize:"500",
                         requirements:['laptop','access to internet','typing speed average of 2wpm']
                     },
-                    {
-                        id:"4",
-                        image:"",
-                        name: "Mobile Development",
-                        registrationCost:"100$",
-                        tuitionCost:"2600$",
-                        timespan:"6 months",
-                        lecturesNumber:"10",
-                        startDate:"August",
-                        endDate:"february",
-                        classSize:"500",
-                        requirements:['laptop','access to internet','typing speed average of 2wpm']
-                    },
-                    {
-                        id:"5",
-                        image:"",
-                        name: "Mobile Development",
-                        registrationCost:"100$",
-                        tuitionCost:"2600$",
-                        timespan:"6 months",
-                        lecturesNumber:"10",
-                        startDate:"August",
-                        endDate:"february",
-                        classSize:"500",
-                        requirements:['laptop','access to internet','typing speed average of 2wpm']
-                    },
         ]
     }
 }

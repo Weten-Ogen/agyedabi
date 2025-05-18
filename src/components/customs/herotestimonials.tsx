@@ -11,12 +11,12 @@ interface herotestimonialsprops {
 const HeroTestimonials = (props:herotestimonialsprops) => {
   return (
     <div className={cn('md:w-[80%] md:mx-auto p-4',props.className)}>
-        <Carousel orientation='horizontal' className=''>
+        <Carousel orientation='horizontal'  className=''>
           <CarouselContent   className=''>
 
             {props.details && props.details.map((item:testimonialprops, i:number) => {
               return (
-                <CarouselItem key={i}>
+                <CarouselItem  key={i}>
                 <HerotestimonialCard    
                 details={item} 
                 />

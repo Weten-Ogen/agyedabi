@@ -23,12 +23,12 @@ interface courseshowcardprops {
 }
 const CourseShowCard = (props:courseshowcardprops) => {
   return (
-    <div className={cn('',props.className)}>
+    <div className={cn('p-0',props.className)}>
         <div className='p-0'>
         {
             
             props.id ?
-            <Card className='p-0'>
+            <Card className='p-0 shadow-xl'>
             <CardContent className=' '>
                 <div className='flex items-center gap-4'>
                     <div className='p-2'>

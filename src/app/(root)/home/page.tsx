@@ -22,7 +22,7 @@ export default async function Home() {
       />
       <CourseCarouselCard
         data={AdminContent.courseContent.courselist}
-        className='md:-top-12'
+        className=''
        />
       <UserDetailCard
         userDetail={
@@ -53,7 +53,7 @@ export default async function Home() {
           }
         }
       />
-      <HeroFooter/>    
+     
     </section>
   )
 }

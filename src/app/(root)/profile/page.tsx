@@ -101,7 +101,7 @@ export default async function Profile() {
           </CardContent>
       </Card>
         </div>
-      <HeroFooter/> 
+     
     </section>
   )
 }

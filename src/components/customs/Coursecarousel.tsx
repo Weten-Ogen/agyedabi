@@ -1,56 +1,60 @@
-"use client"
-import React from 'react'
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../ui/carousel'
-import { cn } from '@/lib/utils'
+'use client'
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from '@/components/ui/carousel'
 import CourseShowCard from './courseshowcard'
-import { Button } from '../ui/button'
-
-
+import { cn } from '@/lib/utils'
+import React from 'react'
+import AutoPlay from 'embla-carousel-autoplay'
 interface courseprops {
-    id:string,
-    name:string,
-    registrationCost:string,
-    tuitionCost:string,
-    timespan:string,
-    lecturesNumber:string,
-    startDate:string,
-    endDate:string,
-    classSize:string,
-    image:string,
-    requirements:string[]
+  id: string
+  name: string
+  registrationCost: string
+  tuitionCost: string
+  timespan: string
+  lecturesNumber: string
+  startDate: string
+  endDate: string
+  classSize: string
+  image: string
+  requirements: string[]
 }
-interface coursecarouselcardprops {
-    className?:string
-    data : courseprops []
+
+interface Props {
+  data: courseprops[]
+  className?: string
 }
-const CourseCarouselCard = (props:coursecarouselcardprops ) => {
+
+export default function CourseCarouselCard({ data, className }: Props) {
+     const plugin = React.useRef(
+    AutoPlay({ delay: 2000, stopOnInteraction: true })
+  )
   return (
-    <div className={cn(" relative  w-[80%] mx-auto ",props.className)}>
-        <Carousel orientation='horizontal'  className=''>
-            <CarouselPrevious     
-                className='  gap-10 hidden md:flex absolute cursor-pointer z-20 text-white  bg-acc-color  p-2 text-lag'
-            />
-            <CarouselContent    className='w-1/3 md:w-2/3 lg:w-3/6'>
-                        {props.data.map((item:courseprops,i:number) => {
-                            return (<CarouselItem key={i} className='p-4' >
-                             <CourseShowCard
-                                    {...item}
-                                 className=""
-                            />
-
-                        </CarouselItem>)
-                            })
-                    }
-
-               
-
-            </CarouselContent>
-                <CarouselNext
-                    className='z-20 hidden md:flex gap-10 absolute  cursor-pointer text-white  bg-acc-color  p-2 text-lag'
-                />
-        </Carousel>
+    <div className={cn(`w-full max-w-7xl bg-transparent mx-auto relative -top-12  p-2`,className)}>
+      <Carousel
+      plugins={[plugin.current]}
+      onMouseEnter={plugin.current.stop}
+      onMouseLeave={plugin.current.reset}
+        opts={{
+          align: 'start',
+        }}
+        className="w-full"
+      >
+        <CarouselContent>
+          {data.map((item, i) => (
+            <CarouselItem
+              key={i}
+              className="md:basis-1/2 lg:basis-1/3"
+            >
+              <CourseShowCard {...item} />
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+       
+      </Carousel>
     </div>
   )
 }
-
-export default CourseCarouselCard
