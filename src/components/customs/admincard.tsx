@@ -16,7 +16,7 @@ const AdminCard = (props: admincardprops) => {
   return (
     <Link href={props.link} className={cn('',props.className)}>
         <Card>
-            <CardContent>
+            <CardContent className="">
                 <CardTitle>
                     {props.label}
                 </CardTitle>

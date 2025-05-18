@@ -163,6 +163,10 @@ export const AdminContent = {
             href: '/assignments'
         },
         {
+            label:"quiz",
+            href:'/quiz'
+        },
+        {
             label:'profile',
             href:'/profile'
         }
@@ -373,3 +377,25 @@ export   const information = [
       href:"/courses"
     },
   ]
+
+export const adminPageContent = {
+    stat: [
+        {
+            figure: "200",
+            label:"users"
+        },
+        {
+            figure: "3",
+            label:"courses"
+        },
+        {
+            figure: "500",
+            label:"communities"
+        },
+        {
+            figure: "50",
+            label:"assignments"
+        },
+        
+    ]
+}

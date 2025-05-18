@@ -1,23 +1,23 @@
 import React from 'react'
-import { AdminContent } from '../../../../content/general'
-import AdminCard from '@/components/customs/admincard'
+import { AdminContent, adminPageContent } from '../../../../content/general'
+import AdminChart from './adminchart'
 
 export default function Admin() {
   return (
-    <section className=''>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center gap-8  p-4'>
-            {
-              AdminContent.adminlinks.map((item :any, index:number) => {
-                return (
-                  <AdminCard 
-                      className='p-4 cursor-pointer'
-                      key={index}
-                      {...item}
-                  />
-                )
-              })
-            }
-          </div>
+    <section className='mt-20'>
+      <div className='flex gap-8 '>
+        {
+          adminPageContent.stat.map((item:any, i:number)=> {
+            return (
+              <AdminChart
+                key={i}
+                {...item}
+              />
+            )
+          })
+        }
+      </div>
+      
     </section>
   )
 }
