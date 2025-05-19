@@ -12,7 +12,7 @@ interface heroprocedureprops {
 const HeroProcedure = (props:heroprocedureprops) => {
   return (
     <div className={cn('md:p-8   bg-gradient-to-b  ',props.className)}>
-            <Typoh2 className='text-center text-wrap text-med font-bold text-acc-color  md:text-lag  uppercase py-2 md:p-0 '>Follow this procedures</Typoh2>
+            <Typoh2 className='text-center text-wrap bg-clip-content text-med bg-radial from-black to-white font-bold text-acc-color  md:text-lag  uppercase my-4 '>Follow this procedures</Typoh2>
         <div className='md:flex md:items-center md:max-w-[80%] md:mx-auto  md:justify-center '>
             <HeroProcedureList
             details={[
