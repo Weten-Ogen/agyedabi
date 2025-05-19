@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`font-poppins  antialiased ${poppins.className}`}
+        className={`font-poppins scroll-smooth antialiased ${poppins.className}`}
       >
         <Toaster 
           richColors

@@ -8,6 +8,7 @@ import HeroServices from "@/components/customs/heroservices";
 import { Cog, LayoutDashboard, Monitor, ShoppingBag } from "lucide-react";
 import HeroFooter from "@/components/customs/herofooter";
 import { auth } from "@/lib/auth";
+import HeroProcedure from "@/components/customs/heroproceedure";
 
 export default async function Cover() {
    const session = await auth()   
@@ -22,16 +23,14 @@ export default async function Cover() {
              paragraph={AdminContent.heroContent.heroParagraph}
              className=""
             />
-            <HeroAccordion
-                  details={AdminContent.HeroAccordion}
-            />
+            <HeroProcedure/>
             {/* how payme
             nt works  */}
             
             <HeroServices
                details={[
                   {
-                    
+                     
                      content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati consequatur officiis corrupti dolore quas, amet doloribus sapiente corporis modi enim.",
                      icon:<ShoppingBag/>,
                      label:"Tutoring"
@@ -71,45 +70,35 @@ export default async function Cover() {
             <HeroTestimonials
                   details={[
                      {
-                        content:'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit impedit quis ut dignissimos rem deserunt adipisci quod repudiandae voluptas consectetur amet in fugiat beatae, officiis a est nam illum nihil!',
-                        email:"marcuw@gmail.com",
+                        content:'Joining Agyedabi was a turning point in my career. The support, mentorship, and resources I received gave me the clarity and confidence I needed to aim higher. Just weeks after joining, I landed an interview with Turing — a global remote company that pays no less than $500. I never imagined I could attract such an opportunity so quickly. I’m incredibly grateful to the Agyedabi community for believing in me and helping me take this leap. This is just the beginning.',
+                        email:"sarahobenewaoben@gmail.com",
                         href:'/profile/2',
-                        imageUrl:'/neural.jpg',
-                        name:'Ariande Grande'
+                        imageUrl:'https://ras5rd0eb4njkcel.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-19%20at%2010.20.19%20AM-HGv9SSx9CG4lazoot7XQNRmFTuyr4B.jpeg',
+                        name:'Sarah Obeng'
                      },
                      {
-                        content:'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit impedit quis ut dignissimos rem deserunt adipisci quod repudiandae voluptas consectetur amet in fugiat beatae, officiis a est nam illum nihil!',
-                        email:"marcuw@gmail.com",
+                        content:'Joining Agyedabi was a turning point in my career. The support, mentorship, and resources I received gave me the clarity and confidence I needed to aim higher. Just weeks after joining, I landed an interview with Turing — a global remote company that pays no less than $500. I never imagined I could attract such an opportunity so quickly. I’m incredibly grateful to the Agyedabi community for believing in me and helping me take this leap. This is just the beginning.',
+                        email:"esther373addo@gmail.com",
                         href:'/profile/2',
-                        imageUrl:'/neural.jpg',
-                        name:'Ariande Grande'
+                        imageUrl:'https://ras5rd0eb4njkcel.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-19%20at%2010.20.20%20AM%20%281%29-Wowu3HOGwFAzsFmNVkuEWSMbb7JNl9.jpeg',
+                        name:'Esther Ohenewaa Abena Addo'
                      },
                      {
-                        content:'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit impedit quis ut dignissimos rem deserunt adipisci quod repudiandae voluptas consectetur amet in fugiat beatae, officiis a est nam illum nihil!',
-                        email:"marcuw@gmail.com",
+                        content:'Joining Agyedabi was a turning point in my career. The support, mentorship, and resources I received gave me the clarity and confidence I needed to aim higher. Just weeks after joining, I landed an interview with Turing — a global remote company that pays no less than $500. I never imagined I could attract such an opportunity so quickly. I’m incredibly grateful to the Agyedabi community for believing in me and helping me take this leap. This is just the beginning.',
+                        email:"mintanaAlexi202@gmail.com",
                         href:'/profile/2',
-                        imageUrl:'/neural.jpg',
-                        name:'Ariande Grande'
+                        imageUrl:'https://ras5rd0eb4njkcel.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-19%20at%2010.20.20%20AM-PpPesxCVVjuNfqxjcpAYpHUHQZRXyh.jpeg',
+                        name:'Alexander Mintah'
                      },
-                     {
-                        content:'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit impedit quis ut dignissimos rem deserunt adipisci quod repudiandae voluptas consectetur amet in fugiat beatae, officiis a est nam illum nihil!',
-                        email:"marcuw@gmail.com",
-                        href:'/profile/2',
-                        imageUrl:'/neural.jpg',
-                        name:'Ariande Grande'
-                     },
-                     {
-                        content:'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit impedit quis ut dignissimos rem deserunt adipisci quod repudiandae voluptas consectetur amet in fugiat beatae, officiis a est nam illum nihil!',
-                        email:"marcuw@gmail.com",
-                        href:'/profile/2',
-                        imageUrl:'/neural.jpg',
-                        name:'Ariande Grande'
-                     },
+                    
                   ]}
             />
                         {/* our job pool */}
             {/* accordion  sections */}
             {/* list sections */}
+            <HeroAccordion
+                  details={AdminContent.HeroAccordion}
+            />
             {/* links */}
             {/* contact section */}
             {/* abouts us */}

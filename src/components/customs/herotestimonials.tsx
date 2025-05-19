@@ -26,10 +26,10 @@ const HeroTestimonials = (props:herotestimonialsprops) => {
       </CarouselContent>
             
               <CarouselPrevious
-               className="z-10 flex gap-10 absolute top-95 md:top-80 cursor-pointer text-white lg:top-78 left-4 lg:left-5 bg-acc-color  p-2 text-lag"
+               className="z-10 flex gap-10 absolute sm:top-[54vh] xs:top-[54vh] md:top-[45vh] cursor-pointer text-white lg:top-[30vh] xl:top-[58vh] left-4 lg:left-5 bg-acc-color  p-2 text-lag"
               />
               <CarouselNext
-                className="z-10 flex gap-10 md:top-80 absolute top-95 cursor-pointer text-white lg:top-78 left-18 lg:left-15 bg-acc-color   p-2 text-lag"
+                className="z-10 flex gap-10 md:top-[45vh] sm:top-[54vh] xs:top-[54vh] absolute  cursor-pointer text-white lg:top-[30vh] xl:top-[58vh] left-18 lg:left-15 bg-acc-color   p-2 text-lag"
               />
             
       </Carousel>

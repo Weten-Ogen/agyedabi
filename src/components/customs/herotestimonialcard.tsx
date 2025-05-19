@@ -37,13 +37,13 @@ const HerotestimonialCard = (props:herotestimonialcardprops) => {
               </div>
 
              
-              <div className='max-w-full h-[50vh] my-10 overflow-hidden rounded-lg object-contain'>
+              <div className='max-w-full h-[60vh] my-10 overflow-hidden rounded-lg '>
                   <Image
                     src={props.details.imageUrl}
                     alt={props.details.imageUrl}
-                    width={500}
+                    width={700}
                     height={500}
-                    className='w-full h-auto object-cover rounded-lg'
+                    className='w-full h-[60vh] object-contain rounded-lg'
                   />
               </div>
             </div>
