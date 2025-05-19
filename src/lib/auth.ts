@@ -10,10 +10,11 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
     }),
   ],
+
   adapter: PrismaAdapter(prisma),
+  
   callbacks: {
     async session({ session, user }) {
-      // Attach additional user fields to session
       if (session.user) {
         session.user.id = user.id
         session.user.role = user.role
