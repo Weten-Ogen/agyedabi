@@ -32,7 +32,7 @@ const Hero = (props: heroprops) => {
         <div className='absolute inset-0 z-20   bg-black/80 w-full h-full  '>
 
 
-        <div className='text-pri-color flex-col flex mt-32 p-4  space-y-8 md:mt-80  w-full h-full md:p-12'>
+        <div className='text-pri-color flex-col flex mt-32 p-4  space-y-8 md:mt-60  w-full h-full md:p-12'>
             <Typoh2 className='uppercase md:max-w-xl text-smm md:text-med text-left md:text-justify '>
                     {props.heading}
             </Typoh2>

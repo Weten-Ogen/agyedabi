@@ -30,7 +30,7 @@ const MobileMenu = (props: mobilemenuprops) => {
         <DropdownMenuTrigger asChild>
           <Menu className='text-sec-color hover:text-acc-color' />
         </DropdownMenuTrigger>
-        <DropdownMenuContent className='relative right-8 p-2 w-full flex items-end gap-4 md:p-0'>
+        <DropdownMenuContent className='relative right-8 p-2 w-full flex items-start gap-4 md:p-0'>
           <div className='p-1'>
             {image && (
               <Avatar>
