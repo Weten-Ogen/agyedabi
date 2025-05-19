@@ -14,7 +14,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { Badge } from "@/components/ui/badge"
-import type { User } from "./quiz"
+import type { User } from "../quiz"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Switch } from "@/components/ui/switch"
@@ -165,7 +165,7 @@ export const EditableDateCell: React.FC<EditableCellProps> = ({ getValue, row, c
   )
 }
 
-export const columns: ColumnDef<User>[] = [
+export const columns: ColumnDef<userprops>[] = [
   {
     id: "select",
     header: ({ table }) => (

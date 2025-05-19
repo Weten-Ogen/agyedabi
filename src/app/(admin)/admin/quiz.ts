@@ -30,7 +30,7 @@ export const fakeer  = {
 
     id: "1",
   text: "loremo shiojeio josjieojojosij oiejoi josijoe ? ",
-  type:"multiple",
+  type:"single",
   options: [
     {
       id: "1",
@@ -46,14 +46,14 @@ export const fakeer  = {
     },
   ],
   correctAnswer:[
-    'locks'
+    '3'
   ]}
 ,
 {
 
     id: "2",
   text: "loremo shiojeio josjieojojosij oiejoi josijoe ? ",
-  type:"multiple",
+  type:"single",
   options: [
     {
       id: "1",
@@ -69,14 +69,14 @@ export const fakeer  = {
     },
   ],
   correctAnswer:[
-    'bucks'
+    '2'
   ]}
 
   ,{
 
     id: "3",
   text: "loremo shiojeio josjieojojosij oiejoi josijoe ? ",
-  type:"multiple",
+  type:"single",
   options: [
     {
       id: "3",
@@ -92,7 +92,7 @@ export const fakeer  = {
     },
   ],
   correctAnswer:[
-    'Bullocks'
+    '1'
   ]}
 
   ]  

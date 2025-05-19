@@ -7,7 +7,8 @@ export const UserUpdateProfileSchema = z.object({
     country:z.string().optional(),
     city:z.string().optional(),
     bio:z.string().optional(),
-    arrears: z.string().optional(),    
+    address:z.string().optional()
+       
 })
 
 export const UserAssignmentProfileSchema = z.object({

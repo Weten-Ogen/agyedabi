@@ -4,16 +4,19 @@ import Image from 'next/image'
 import React from 'react'
 import { Skeleton } from '../ui/skeleton'
 import UserBio from '../userbio'
+import { Session } from 'next-auth'
+import { projectGetSourceMap } from 'next/dist/build/swc/generated-native'
 
 interface  homepageimageprops {
     className?:string,
     imageUrl:string,
-
+    user:Session | null
 }
 
 const HomePageImage = (props:homepageimageprops) => {
   return (
-    <div className={cn('w-full relative  h-[45vh]  bg-black/65 overflow-hidden object-contain',props.className)}>
+    <div className={cn('w-full relative  h-[45vh] overflow-hidden object-contain',props.className)}>
+        <div className='-z-20'>
         {
             props.imageUrl ?
             <Image
@@ -22,18 +25,25 @@ const HomePageImage = (props:homepageimageprops) => {
             width={1000}
             height={1000}
             className='w-full h-full  md:h-auto md:object-cover '
-        />: 
-        <Skeleton  
+            />: 
+            <Skeleton  
             className='w-full h-[45vh] bg-slate-400'
-        />
-        }
-        <div className='absolute inset-5 z-10 text-white'>
-            <UserBio
-                description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, neque! Laudantium eum voluptatum a unde, est doloremque totam earum fuga magni eaque sit praesentium libero veniam voluptatibus quibusdam amet explicabo adipisci, temporibus rem! Distinctio, hic exercitationem. Alias cupiditate, repudiandae in veniam, incidunt consectetur, quos nesciunt laborum corrupti fuga laudantium minus.'
-                imageUrl=''
-                className=''
-                userName='marcus'
             />
+        }
+        </div>
+        <div className='absolute inset-0  bg-black/80 text-white'>
+        <div className=''>
+
+            {
+                props.user &&
+                <UserBio
+                description={props.user?.user.bio as string}
+                imageUrl={props.user?.user.profileImage as string}
+                className=''
+                userName={props.user?.user.name as string}
+                />
+            }
+            </div>
         </div>
     </div>
   )

@@ -2,12 +2,13 @@
 import { cn } from '@/lib/utils'
 import { Bell, BellDot } from 'lucide-react'
 import React from 'react'
-import { Button } from '../ui/button'
 import { usePathname, useRouter } from 'next/navigation'
 import MobileMenu from './mobilemenu'
+import { Session } from 'next-auth'
 
 interface additionalnavlinksprops {
     className?:string,
+   
 }
 
 const AdditionalNavlinks = (props:additionalnavlinksprops) => {

@@ -6,12 +6,14 @@ import Typoh2 from '../customs/typoh2'
 import Typoh4 from '../customs/typoh4'
 import Typop from '../customs/typop'
 import TypoBtn from '../customs/typobtn'
+import { Session } from 'next-auth'
 
 interface heroprops {
     className?:string,
     heroImage:string,
     heading:string,
     subHeading:string,
+    user:Session | null
     paragraph:string,
 }
 const Hero = (props: heroprops) => {

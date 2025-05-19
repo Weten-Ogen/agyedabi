@@ -1,6 +1,6 @@
 import React from 'react'
 import { Quiz } from './quiz'
-import { fakeer } from '../../../../table/quiz'
+import { fakeer } from '../../(admin)/admin/quiz'
 
 export default function page() {
   return (

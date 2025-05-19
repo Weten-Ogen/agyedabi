@@ -25,12 +25,12 @@ const UserBio = (props:userbioprops) => {
                 width={20}
                 height={20}
             />  : <Skeleton className='h-10 w-10 rounded-lg bg-slate-400'/>}
-            <Typoh4  className='font-poppins text-smm '>
-               {userString}
+            <Typoh4  className='font-poppins text-smm  capitalize '>
+               {props.userName}
             </Typoh4>
         </div>
         <div >
-            <Typop className='text-pri-color max-w-lg font-poppins text-sml line-clamp-3'>
+            <Typop className='text-white max-w-lg font-poppins text-sml '>
                 {props.description}
             </Typop>
         </div>

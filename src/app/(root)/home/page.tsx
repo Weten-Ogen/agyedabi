@@ -17,6 +17,7 @@ export default async function Home() {
   return (
     <section className='relative -z-10 w-full max-w-full'>
       <HomePageImage
+        user={session}
         imageUrl={AdminContent.homeContent.homeImage}
         className=''
       />

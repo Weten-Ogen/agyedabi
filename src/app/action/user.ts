@@ -11,8 +11,22 @@ export async function getUserById(id:string){
     return user
 }
 
-export async function updateUserById(id:string) {
-   
+export async function updateUserById(values:any) {
+   const user = await prisma.user.update({
+    where:{
+        email: values.email
+    },
+    data:{
+        address: values.address,
+        bio: values.bio,
+        city:values.city,
+        name:values.name,
+        email:values.email,
+        country:values.country,
+        contact:values.contact,
+        occupation:values.occupation
+    }
+   })
 }
 
 export async function deleteUserById(id:string) {

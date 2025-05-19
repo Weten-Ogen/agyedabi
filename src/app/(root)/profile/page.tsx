@@ -8,6 +8,7 @@ import { Card, CardContent, CardDescription } from '@/components/ui/card';
 import HeroFooter from '@/components/customs/herofooter';
 import { auth, signIn } from '@/lib/auth';
 import { redirect } from 'next/navigation';
+import { getUserById } from '@/app/action/user';
 
 
 
@@ -16,7 +17,7 @@ export default async function Profile() {
     if(!session) {
       await signIn()
     }
-  const user = fakeuser;
+  const user = await getUserById(session?.user.id as string);
   return (
     <section className='
      mt-20 md:mt-12 md:p-0   p-4'>
@@ -36,64 +37,54 @@ export default async function Profile() {
         </aside>
           <Card className='w-full p-0'>
               <CardContent className='w-full p-4 flex flex-col gap-4'>
-        
+       
           <ProfileLabelDiv
             label='name'
-            value={user.name}
+            value={user?.name as string}
             valueClass='text-foreground'
             />
+      
           <ProfileLabelDiv
             label='email'
             valueClass='text-foreground lowercase '
             
-            value={user.email}
+            value={user?.email as string}
             />
           <ProfileLabelDiv
             valueClass='text-foreground'
             label='country'
-            value={user.country as string}
+            value={user?.country as string}
             />
            <ProfileLabelDiv
             valueClass='text-foreground'
             label='city'
-            value={user.city as string}
-            />
-           <ProfileLabelDiv
-            valueClass='text-foreground'
-            label='verified'
-            value={user.vetted ?  'yes' : 'no'}
+            value={user?.city as string}
             />
          
+         
            <ProfileLabelDiv
-            label='monthly debts'
-            valueClass='text-foreground'
-            value={user.arrears as string}
-            />
-           <ProfileLabelDiv
-            label='debts'
-            valueClass='text-foreground text-sml'
-            value={user.debt as string}
-            />
-           <ProfileLabelDiv
-            label='group'
+            label='address'
             valueClass='text-foreground '
-            value={user.group as string}
+            value={user?.address as string}
             />
+           
+           
            <ProfileLabelDiv
-            label='total tuition'
-            valueClass='text-foreground text-sml'
-            value={user.tuition as string}
+            label='contact'
+            valueClass='text-foreground '
+            value={user?.contact as string}
             />
-          <div className='flex items-start flex-col justify-between'>
-            <Typoh4 className='text-left text-sml capitalize font-poppins'>bio</Typoh4>
+          
+          <div className='flex items-start flex-col p-4 justify-between'>
+            <Typoh4 className='text-left text-smm capitalize font-poppins'>bio</Typoh4>
             <CardDescription className='container  p-4 '>
-              {user.bio}
+              {user?.bio}
             </CardDescription>
         
            </div>
 
         <BtnLink
-          href={`/profile/update/${user.id}`}
+          href={`/profile/update/${user?.id}`}
           label='update profile'
            className='text-white w-full py-5'
           />

@@ -1,5 +1,4 @@
 "use client"
-
 import * as React from "react"
 import type { ColumnDef } from "@tanstack/react-table"
 import { ArrowUpDown, MoreHorizontal } from "lucide-react"
@@ -14,7 +13,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { Badge } from "@/components/ui/badge"
-import type { User } from "@/data/users"
+import type { User } from "../quiz"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Switch } from "@/components/ui/switch"
@@ -118,7 +117,7 @@ export const EditableBooleanCell: React.FC<EditableCellProps> = ({ getValue, row
   return (
     <div className="flex items-center space-x-2">
       <Switch checked={value} onCheckedChange={onValueChange} className="data-[state=checked]:bg-green-500" />
-      <Badge variant={value ? "success" : "secondary"} className="capitalize">
+      <Badge variant={value ? "default" : "secondary"} className="capitalize">
         {value ? "Active" : "Inactive"}
       </Badge>
     </div>
@@ -165,7 +164,7 @@ export const EditableDateCell: React.FC<EditableCellProps> = ({ getValue, row, c
   )
 }
 
-export const columns: ColumnDef<User>[] = [
+export const columns: ColumnDef<userprops>[] = [
   {
     id: "select",
     header: ({ table }) => (
@@ -187,135 +186,126 @@ export const columns: ColumnDef<User>[] = [
   },
   {
     accessorKey: "id",
-    header: ({ column }) => {
-      return (
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-          className="p-0 hover:bg-transparent"
-        >
-          ID
-          <ArrowUpDown className="ml-2 h-4 w-4" />
-        </Button>
-      )
-    },
+    header: ({ column }) => (
+      <Button
+        variant="ghost"
+        onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        className="p-0 hover:bg-transparent"
+      >
+        ID
+        <ArrowUpDown className="ml-2 h-4 w-4" />
+      </Button>
+    ),
     cell: ({ row }) => <div className="font-mono text-xs">{row.getValue("id")}</div>,
-    enableEditing: false,
   },
   {
     accessorKey: "name",
-    header: ({ column }) => {
-      return (
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-          className="p-0 hover:bg-transparent"
-        >
-          Name
-          <ArrowUpDown className="ml-2 h-4 w-4" />
-        </Button>
-      )
-    },
-    cell: ({ row, table, column, rowIndex }) => (
-      <EditableCell getValue={() => row.getValue("name")} row={row} column={column} table={table} rowIndex={rowIndex} />
+    header: ({ column }) => (
+      <Button
+        variant="ghost"
+        onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        className="p-0 hover:bg-transparent"
+      >
+        Name
+        <ArrowUpDown className="ml-2 h-4 w-4" />
+      </Button>
+    ),
+    cell: ({ row, table, column }) => (
+      <EditableCell
+        getValue={() => row.getValue("name")}
+        row={row}
+        column={column}
+        table={table}
+        rowIndex={row.index} // ✅ Fixed here
+      />
     ),
   },
   {
     accessorKey: "email",
-    header: ({ column }) => {
-      return (
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-          className="p-0 hover:bg-transparent"
-        >
-          Email
-          <ArrowUpDown className="ml-2 h-4 w-4" />
-        </Button>
-      )
-    },
-    cell: ({ row, table, column, rowIndex }) => (
+    header: ({ column }) => (
+      <Button
+        variant="ghost"
+        onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        className="p-0 hover:bg-transparent"
+      >
+        Email
+        <ArrowUpDown className="ml-2 h-4 w-4" />
+      </Button>
+    ),
+    cell: ({ row, table, column }) => (
       <EditableCell
         getValue={() => row.getValue("email")}
         row={row}
         column={column}
         table={table}
-        rowIndex={rowIndex}
+        rowIndex={row.index} // ✅ Fixed here
       />
     ),
   },
   {
     accessorKey: "role",
-    header: ({ column }) => {
-      return (
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-          className="p-0 hover:bg-transparent"
-        >
-          Role
-          <ArrowUpDown className="ml-2 h-4 w-4" />
-        </Button>
-      )
-    },
-    cell: ({ row, table, column, rowIndex }) => (
+    header: ({ column }) => (
+      <Button
+        variant="ghost"
+        onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        className="p-0 hover:bg-transparent"
+      >
+        Role
+        <ArrowUpDown className="ml-2 h-4 w-4" />
+      </Button>
+    ),
+    cell: ({ row, table, column }) => (
       <EditableRoleCell
         getValue={() => row.getValue("role")}
         row={row}
         column={column}
         table={table}
-        rowIndex={rowIndex}
+        rowIndex={row.index} // ✅ Fixed here
       />
     ),
-    filterFn: (row, id, value) => {
-      return value.includes(row.getValue(id))
-    },
+    filterFn: (row, id, value) => value.includes(row.getValue(id)),
   },
   {
     accessorKey: "active",
-    header: ({ column }) => {
-      return (
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-          className="p-0 hover:bg-transparent"
-        >
-          Status
-          <ArrowUpDown className="ml-2 h-4 w-4" />
-        </Button>
-      )
-    },
-    cell: ({ row, table, column, rowIndex }) => (
+    header: ({ column }) => (
+      <Button
+        variant="ghost"
+        onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        className="p-0 hover:bg-transparent"
+      >
+        Status
+        <ArrowUpDown className="ml-2 h-4 w-4" />
+      </Button>
+    ),
+    cell: ({ row, table, column }) => (
       <EditableBooleanCell
         getValue={() => row.getValue("active")}
         row={row}
         column={column}
         table={table}
-        rowIndex={rowIndex}
+        rowIndex={row.index} // ✅ Fixed here
       />
     ),
   },
   {
     accessorKey: "createdAt",
-    header: ({ column }) => {
-      return (
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-          className="p-0 hover:bg-transparent"
-        >
-          Created At
-          <ArrowUpDown className="ml-2 h-4 w-4" />
-        </Button>
-      )
-    },
-    cell: ({ row, table, column, rowIndex }) => (
+    header: ({ column }) => (
+      <Button
+        variant="ghost"
+        onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        className="p-0 hover:bg-transparent"
+      >
+        Created At
+        <ArrowUpDown className="ml-2 h-4 w-4" />
+      </Button>
+    ),
+    cell: ({ row, table, column }) => (
       <EditableDateCell
         getValue={() => row.getValue("createdAt")}
         row={row}
         column={column}
         table={table}
-        rowIndex={rowIndex}
+        rowIndex={row.index} // ✅ Fixed here
       />
     ),
   },

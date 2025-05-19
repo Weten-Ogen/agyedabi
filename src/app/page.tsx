@@ -1,21 +1,21 @@
 import Hero from "@/components/hero/hero";
-import Image from "next/image";
 import { AdminContent } from "../../content/general";
 import AboutUs from "@/components/customs/aboutus";
 import HerobillingCard from "@/components/customs/herobillingcard";
 import HeroAccordion from "@/components/customs/heroaccordion";
-import HerotestimonialCard from "@/components/customs/herotestimonialcard";
 import HeroTestimonials from "@/components/customs/herotestimonials";
 import HeroServices from "@/components/customs/heroservices";
 import { Cog, LayoutDashboard, Monitor, ShoppingBag } from "lucide-react";
 import HeroFooter from "@/components/customs/herofooter";
+import { auth } from "@/lib/auth";
 
-export default function Cover() {
-   
+export default async function Cover() {
+   const session = await auth()   
   return (
      <section className="">
         <div className="w-full">
             <Hero
+            user={session}
              heading={AdminContent.heroContent.heroHeading}
              subHeading={AdminContent.heroContent.heroSubHeading}
              heroImage={AdminContent.heroContent.heroImage}
