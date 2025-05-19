@@ -67,11 +67,10 @@ model Session {
 }
 
 model VerificationToken {
-  id String @id @default(cuid())
   identifier String
   token      String
   expires    DateTime
-  @@unique([identifier, token])
+  @@id([identifier, token])
 }
 
 // Optional for WebAuthn support
@@ -157,7 +156,7 @@ enum QuestionType {
   MULTIPLE
 }
 model Option  {
-  id  String @id @default(cuid())
+  id  String @default(cuid())
   label String
   questionId String @unique
   question Question @relation(fields: [questionId],references: [id],onDelete: Cascade)
