@@ -18,7 +18,7 @@ const AboutUs = (props:aboutusprops) => {
         <Card className='p-0 shadow-xl'>
             <CardContent className='flex font-poppins flex-col gap-4 p-0'>
                 <div>
-                    <CardTitle className='text-med uppercase py-5 text-center'>
+                    <CardTitle className='text-med uppercase font-space-grotesk py-5 text-center'>
                     {props.details.heading}
                 </CardTitle>
                 </div>

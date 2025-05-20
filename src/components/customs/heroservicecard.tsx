@@ -16,7 +16,7 @@ const HeroServiceCard = (props:heroserviceprops) => {
             <div className='bg-acc-color p-4 rounded-lg max-w-14 text-white inline-block '>
               {props.details.icon}
             </div>
-            <CardTitle className='text-smm uppercase tracking-wide font-bold '>{props.details.label}</CardTitle>
+            <CardTitle className='text-smm uppercase font-space-grotesk tracking-wide font-bold '>{props.details.label}</CardTitle>
             <CardDescription className='text-sml'>{props.details.content}</CardDescription>
         </CardContent>
       </Card>

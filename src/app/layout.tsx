@@ -3,7 +3,13 @@ import { Poppins} from "next/font/google";
 import "./globals.css";
 import Provider from "@/components/provider";
 import { Toaster } from "sonner";
+import { Space_Grotesk } from 'next/font/google';
 
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-space-grotesk',
+  display: 'swap',
+});
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata: Metadata = {
@@ -19,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`font-poppins scroll-smooth antialiased ${poppins.className}`}
+        className={`font-poppins scroll-smooth antialiased ${poppins.className} ${spaceGrotesk.variable}`}
       >
         <Toaster 
           richColors

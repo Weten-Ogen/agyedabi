@@ -32,14 +32,14 @@ const Hero = (props: heroprops) => {
         <div className='absolute inset-0 z-20   bg-black/80 w-full h-full  '>
 
 
-        <div className='text-pri-color flex-col flex mt-32 p-4  space-y-8 md:mt-60  w-full h-full md:p-12'>
-            <Typoh2 className='uppercase md:max-w-xl text-smm md:text-med text-left md:text-justify '>
+        <div className='text-pri-color flex-col flex mt-32 p-4  space-y-8 md:mt-60  w-full h-full md:p-12 font-space-grotesk'>
+            <Typoh2 className='uppercase md:max-w-xl font-space-grotesk text-smm md:text-med text-left md:text-justify '>
                     {props.heading}
             </Typoh2>
-            <Typoh4 className='normal leading-7 md:max-w-xl text-sml md:text-smm text-left md:text-justify '>
+            <Typoh4 className='normal leading-7 md:max-w-xl text-sml font-space-grotesk md:text-smm text-left md:text-justify '>
                     {props.subHeading}
             </Typoh4>
-            <TypoBtn className='bg-acc-color  text-pri-color text-sml uppercase font-poppins hover:bg-pri-color hover:text-acc-color tracking-wider md:w-xl py-2 px-8' href="/api/auth/callback/google">
+            <TypoBtn className='bg-acc-color  text-pri-color text-sml uppercase  hover:bg-pri-color font-space-grotesk hover:text-acc-color tracking-wider md:w-xl py-2 px-8' href="/api/auth/callback/google">
                 join us
             </TypoBtn>
         </div>

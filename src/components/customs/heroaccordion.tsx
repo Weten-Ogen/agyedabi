@@ -26,12 +26,12 @@ const HeroAccordion = (props : heroaccordionprops) => {
               {props.details.map((item:heroaccordprops, i:number) => {
               return ( 
                 <AccordionItem className='' key={i} value={`item.title-${i}`}>
-                <AccordionTrigger className='bg-white text-smm'>
+                <AccordionTrigger className='bg-white font-space-grotesk text-smm'>
                     {item.title}
                 </AccordionTrigger>
                 <AccordionContent className='text-sml max-w-5xl leading-7 '>
                     
-                    <Typop className='text-sml text-muted-foreground'>
+                    <Typop className='text-sml  text-muted-foreground'>
                         {item.content}
                     </Typop>
                     <div className=''>
