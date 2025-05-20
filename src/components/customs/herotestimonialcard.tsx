@@ -26,7 +26,7 @@ const HerotestimonialCard = (props:herotestimonialcardprops) => {
                     {props.details.content}
                   </Typop>
               </div>
-              <Link className='text-sml  text-acc-color cursor-pointer' href={props.details.href}>Read full story</Link>
+              <Link className='text-sml  text-accolor cursor-pointer' href={props.details.href}>Read full story</Link>
 
               <div 
                 className='h-[2px] bg-slate-200 w-full my-2'

@@ -68,30 +68,7 @@ export default async function Cover() {
             
             <HerobillingCard/>
             <HeroTestimonials
-                  details={[
-                     {
-                        content:'Joining Agyedabi was a turning point in my career. The support, mentorship, and resources I received gave me the clarity and confidence I needed to aim higher. Just weeks after joining, I landed an interview with Turing — a global remote company that pays no less than $500. I never imagined I could attract such an opportunity so quickly. I’m incredibly grateful to the Agyedabi community for believing in me and helping me take this leap. This is just the beginning.',
-                        email:"sarahobenewaoben@gmail.com",
-                        href:'/profile/2',
-                        imageUrl:'https://ras5rd0eb4njkcel.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-19%20at%2010.20.19%20AM-HGv9SSx9CG4lazoot7XQNRmFTuyr4B.jpeg',
-                        name:'Sarah Obeng'
-                     },
-                     {
-                        content:'Joining Agyedabi was a turning point in my career. The support, mentorship, and resources I received gave me the clarity and confidence I needed to aim higher. Just weeks after joining, I landed an interview with Turing — a global remote company that pays no less than $500. I never imagined I could attract such an opportunity so quickly. I’m incredibly grateful to the Agyedabi community for believing in me and helping me take this leap. This is just the beginning.',
-                        email:"esther373addo@gmail.com",
-                        href:'/profile/2',
-                        imageUrl:'https://ras5rd0eb4njkcel.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-19%20at%2010.20.20%20AM%20%281%29-Wowu3HOGwFAzsFmNVkuEWSMbb7JNl9.jpeg',
-                        name:'Esther Ohenewaa Abena Addo'
-                     },
-                     {
-                        content:'Joining Agyedabi was a turning point in my career. The support, mentorship, and resources I received gave me the clarity and confidence I needed to aim higher. Just weeks after joining, I landed an interview with Turing — a global remote company that pays no less than $500. I never imagined I could attract such an opportunity so quickly. I’m incredibly grateful to the Agyedabi community for believing in me and helping me take this leap. This is just the beginning.',
-                        email:"mintanaAlexi202@gmail.com",
-                        href:'/profile/2',
-                        imageUrl:'https://ras5rd0eb4njkcel.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-19%20at%2010.20.20%20AM-PpPesxCVVjuNfqxjcpAYpHUHQZRXyh.jpeg',
-                        name:'Alexander Mintah'
-                     },
-                    
-                  ]}
+                  details={AdminContent.HeroTestimonials}
             />
                         {/* our job pool */}
             {/* accordion  sections */}
