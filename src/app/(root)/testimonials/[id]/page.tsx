@@ -1,9 +1,16 @@
+
+
 import Image from 'next/image';
 import { AdminContent } from '../../../../../content/general';
 
-export default function page({ params }: { params: { id: string } }) {
-  const { id } = params;
-  const user = AdminContent.HeroTestimonials.find((item) => item.id === id);
+type Props = {
+  params: {
+    id: string;
+  };
+};
+
+export default function Page({ params }: Props) {
+  const user = AdminContent.HeroTestimonials.find((item) => item.id === params.id);
 
   if (!user) {
     return <div>User not found</div>;
