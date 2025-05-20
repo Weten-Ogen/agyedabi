@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import { AdminContent } from '../../../../../content/general'
 import Image from 'next/image'
