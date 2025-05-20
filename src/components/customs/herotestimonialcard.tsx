@@ -22,11 +22,11 @@ const HerotestimonialCard = (props:herotestimonialcardprops) => {
                   <Quote 
                   size={45}
                   className='rotate-180 text-lag my-3   text-acc-color' />
-                  <Typop className='py-1 '>
+                  <Typop className='py-1 line-clamp-12 md:line-clamp-3'>
                     {props.details.content}
                   </Typop>
               </div>
-              <Link className='text-sml  text-accolor cursor-pointer' href={props.details.href}>Read full story</Link>
+              <Link className='text-sml  text-acc-color cursor-pointer' href={props.details.href}>Read full story</Link>
 
               <div 
                 className='h-[2px] bg-slate-200 w-full my-2'

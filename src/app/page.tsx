@@ -9,6 +9,8 @@ import { Cog, LayoutDashboard, Monitor, ShoppingBag } from "lucide-react";
 import HeroFooter from "@/components/customs/herofooter";
 import { auth } from "@/lib/auth";
 import HeroProcedure from "@/components/customs/heroproceedure";
+import HeroPaymentInfo from "@/components/customs/heropaymentinfo";
+import HeroPayments from "@/components/customs/heropayments";
 
 export default async function Cover() {
    const session = await auth()   
@@ -72,11 +74,16 @@ export default async function Cover() {
             />
                         {/* our job pool */}
             {/* accordion  sections */}
-            {/* list sections */}
             <HeroAccordion
-                  details={AdminContent.HeroAccordion}
+            className="bg-acc-color md:h-[80vh] bg-gradient-to-r from-acc-color to-white/50"
+            details={AdminContent.HeroAccordion}
             />
-            {/* links */}
+            {/* list sections */}
+            <HeroPayments
+               content="At Agyedabi, your success starts with a secure and structured process. All applicants are required to complete our vetting process first. Once verified, you must make your registration payment in full to officially secure your spot.⚠️ Please note: We only provide onboarding support and preparation guidance after full registration payment has been made.To ensure smooth planning and onboarding, payments must be made at least two (2) weeks before the course start date. Failure to do so will result in your admission being pushed to the next cohort , no exceptions.All payments are non-refundable, so we use a two-person payment verification system for your safety. Payments must always be made while on a call or chat with an official Agyedabi admin. We will not be held responsible for any unauthorized or unverified transactions.📞 Once you're verified, give us a call or message us directly  and we’ll guide you every step of the way toward launching your tech career."
+               title="Payments Guide"
+               className="p-4 w-full md:w-[80%] md:mx-auto"
+            />
             {/* contact section */}
             {/* abouts us */}
             <div className="bg-acc-color/80 py-2 ">
