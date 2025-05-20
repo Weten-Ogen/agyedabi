@@ -1,8 +1,7 @@
-// src/app/(root)/testimonials/[id]/page.tsx
 import Image from 'next/image';
 import { AdminContent } from '../../../../../content/general';
 
-export default function Page({ params }: { params: { id: string } }) {
+export default function page({ params }: { params: { id: string } }) {
   const { id } = params;
   const user = AdminContent.HeroTestimonials.find((item) => item.id === id);
 
