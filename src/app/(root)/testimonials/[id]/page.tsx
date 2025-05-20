@@ -9,7 +9,7 @@ interface PageProps {
 }
 
 export default async function Page({ params }: PageProps) {
-  const { id } = await params;
+  const { id } =  params;
   console.log(id)
  
   const user = AdminContent.HeroTestimonials.find(item => item.id === id);
