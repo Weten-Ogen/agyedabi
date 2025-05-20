@@ -32,7 +32,7 @@ export const AdminContent = {
         {
             id:'1',
             callToAction:'update profile',
-            content:'Welcome to Agyedabi! After signing up , the first step is to update your profile with accurate details. This helps us understand your background and connect you to the right learning path. Your  updated profile also boost your chances of landing a gig after after the bootcamp. Make sure your information is complete so we can  supoprt you every step of the way.',
+            content:'Welcome to Agyedabi!,We’re excited to have you on board.To get started, please update your profile with accurate and complete information. This helps us understand your background, tailor your learning experience, and connect you with the right opportunities.A well-filled profile not only enhances your bootcamp journey but also increases your chances of landing gigs afterward. The more we know about you, the better we can support you , every step of the way.Let’s build your future, together.',
             href:"/profile/update/1",
             title:"Have you update your profile Page ?",
             imageUrl:"/neural.jpg"
@@ -40,7 +40,7 @@ export const AdminContent = {
          {
             id:'2',
             callToAction:'join course',
-            content:"To get started , you'll need to register  by paying a small fee- some courses may cost less ,but the official full program has  $100 regitrational fee. While you're welcome  to explore other options, we strongly recommend taking our offical course if you want us to help you get land a tech gig  afterwards. It's designed  to give you  the skills , mentorship, and real-world experience needed to succeed .Plus, we only collect the full tuition after you've secured a job- so there's no upfront risk.",
+            content:"Getting Started at Agyedabi.To begin your journey, you'll need to register by paying a small fee. While some courses may cost less, our official full program requires a $100 registration fee.You're welcome to explore other options, but if your goal is to land a tech gig with our support, we highly recommend enrolling in the official program. It’s built to equip you with the in-demand skills, personalized mentorship, and hands-on experience you need to succeed in today’s tech industry.And the best part? You don’t pay the full tuition until you’ve landed a job , meaning there’s no upfront financial risk.Take the first step toward a future in tech , we’re here to help you every step of the way.",
             href:"/profile/course/1",
             title:"What do i need to do after updating my profile page ?",
             imageUrl:"/neural.jpg"
@@ -48,7 +48,7 @@ export const AdminContent = {
          {
             id: '3',
             callToAction:'',
-            content:'All payments  for our service must be made strictly through  the official  Agyedabi  app. Do not send money through any third-party platforms , links or individuals.if you receive a payment  request  or a link  claiming to  represent us . Please search for Agyedabi on Google  and only use the official link that leads to  our  app or website. We will not be responsible for any loss.',
+            content:'Important Payment Notice. All payments for Agyedabi services must be made exclusively through our official app. Please do not send money through third-party platforms, personal links, or individuals.If you receive any payment request or link claiming to represent Agyedabi, always verify its authenticity by searching “Agyedabi” on Google and using only the official app or website.We will not be responsible for any loss resulting from payments made outside our verified platforms. Stay safe — and always pay through the official channels.',
             href:"/profile/profile/payment",
             title:"What of the payments and how to go about it?",
             imageUrl:"/neural.jpg"
@@ -56,7 +56,7 @@ export const AdminContent = {
          {
             id:'4',
             callToAction:'contact us',
-            content:'For any inquiries, please contact Agyedabi through the Help link on our chanels. We are here to help you change the Direction .',
+            content:'Need Help? .For any questions or concerns, please reach out to Agyedabi through the Help link available on our official channels.We’re here to support you — and to help you change your direction for the better.',
             href:"/profile/help",
             title:"Do you need help with any of this process",
             imageUrl:"/neural.jpg"
@@ -64,7 +64,7 @@ export const AdminContent = {
          {
             id: '5',
             callToAction:'',
-            content:'Agyedabi is not a School. It a shop that offer you skills and helps you get a gig. The registration cost is  neccessary the communication to us that you are willing to buy a slot for the course.As we would wish to teach everyone at the same time but we can not . We more into quality over quantity.The money is also used to make some initial preparations for the process.',
+            content:"Agyedabi is Not a School — It’s a Skill ShopAt Agyedabi, we don’t operate like a traditional school. We’re a shop for skills — focused on helping you learn what matters and land real gigs.The registration fee is not just a payment — it’s your way of showing commitment and securing a slot in the course. While we’d love to teach everyone at once, we prioritize quality over quantity, ensuring every learner gets the attention and guidance they need.This fee also helps cover the initial setup and preparation needed to kick-start your learning journey.We're here to help you grow — one skill, one gig, and one step at a time.",
             href:"/profile/profile/payment",
             title:"Why do I make need to make registrations payments two weeks before start date ?",
            
