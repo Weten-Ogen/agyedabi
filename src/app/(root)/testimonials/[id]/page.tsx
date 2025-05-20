@@ -3,15 +3,10 @@ import React from 'react'
 import { AdminContent } from '../../../../../content/general'
 import Image from 'next/image'
 
-interface PageProps {
-  params: {
-    id: string
-  }
-}
 
-export default  function Page({ params }: PageProps) {
+
+export default  function Page({ params}:{params: {id: string}}) {
   const { id } =  params;
-  console.log(id)
  
   const user = AdminContent.HeroTestimonials.find(item => item.id === id);
 
