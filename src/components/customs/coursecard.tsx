@@ -42,7 +42,7 @@ const CourseCard = (props:coursecardprops) => {
                     />
                     <CourseShowCardDiv
                         label='number of lectures'
-                        value={props.details.lecturesNumber}
+                        value={props.details.lectureNumber}
                         labelClass='text-left'
                         valueClass='text-right'
                         className='flex items-center justify-between w-full text-sml font-poppins text-foreground gap-8'
