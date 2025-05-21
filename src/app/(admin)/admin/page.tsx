@@ -6,6 +6,8 @@ import { redirect } from 'next/navigation'
 
 export default async function Admin() {
   const session = await auth()
+  if(!session || session?.user.role?.toLowerCase() == 'admin') redirect('/')
+    { redirect('/')}
   if(session?.user.role?.toLowerCase() !== "admin") {
     redirect('/home')
   }
