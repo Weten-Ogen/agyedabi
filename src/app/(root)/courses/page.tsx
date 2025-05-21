@@ -14,7 +14,7 @@ export default async function Courses() {
     if(!session) {
      await signIn()
     }
-    const courses = await getCourses()
+    const courses = await getCourses();
   return (
     <section className='w-full  mt-10'>
       <div

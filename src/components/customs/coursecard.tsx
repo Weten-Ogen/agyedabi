@@ -1,5 +1,5 @@
 'use client'
-import { cn } from '@/lib/utils'
+import { cn, formatUSD } from '@/lib/utils'
 import React from 'react'
 import { Card, CardContent, CardDescription, CardTitle } from '../ui/card'
 import BtnLink from './btnlink'
@@ -35,7 +35,7 @@ const CourseCard = (props:coursecardprops) => {
                     />
                     <CourseShowCardDiv
                         label='registration fee'
-                        value={props.details.registrationCost}
+                        value={formatUSD(props.details.registrationCost)}
                         labelClass='text-left'
                         valueClass='text-right'
                         className='flex items-center justify-between w-full text-sml font-poppins text-foreground gap-8'
