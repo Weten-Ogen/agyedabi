@@ -17,10 +17,13 @@ const BtnLink = (props:btnlinkprops) => {
     }
     return (
     <Button
-    className={cn('bg-acc-color hover:bg-acc-color hover:text-white hover:ease-out hover:duration-300 hover:-translate-y-0.5 text-white font-bold capitalize p-4 text-sml cursor-pointer my-2',props.className)} 
+    className={cn('bg-acc-color hover:bg-acc-color hover:text-white hover:ease-out hover:duration-300 hover:-translate-y-0.5 cursor-pointer text-white font-bold capitalize p-4 text-sml z-10  my-2',props.className)} 
     onClick={handlepress} 
      >
+        <span className='text-white font-space-grotesk text-sml capitalize'>
         {props.label}
+
+        </span>
     </Button>
   )
 }

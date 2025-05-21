@@ -75,7 +75,7 @@ export default async function Cover() {
                         {/* our job pool */}
             {/* accordion  sections */}
             <HeroAccordion
-            className="bg-acc-color md:h-[80vh] bg-gradient-to-r from-acc-color to-white/50"
+            className="bg-acc-color md:h-[80vh] bg-radial from-acc-color to-blue-400"
             details={AdminContent.HeroAccordion}
             />
             {/* list sections */}

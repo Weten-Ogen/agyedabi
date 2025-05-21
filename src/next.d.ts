@@ -29,12 +29,12 @@ interface courseprops {
     registrationCost:string,
     tuitionCost:string,
     timespan:string,
-    lecturesNumber:string,
+    lectureNumber:string,
     startDate:string,
     endDate:string,
     classSize:string,
-    image:string,
-    requirements:string[]
+    image?:string,
+    requirements:string
 }
 
 interface assignmentprops {

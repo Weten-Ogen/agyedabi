@@ -22,7 +22,7 @@ const CourseShowCardMapDiv = (props:courseshowcardmapdivprops) => {
             { props.items && props.items.map((item:string,i:number)=> {
                 return (
                     <Badge  key={i} 
-                    className={cn('p-4 text-sml font-poppins capitalize text-white bg-sec-color',props.itemsClass)}>  {item}
+                    className={cn('p-4 text-sml font-poppins capitalize text-white bg-acc-color',props.itemsClass)}>  {item}
                     </Badge>
                 )
             })}

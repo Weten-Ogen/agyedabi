@@ -13,42 +13,30 @@ interface courseshowcardprops {
         registrationCost:string,
         tuitionCost:string,
         timespan:string,
-        lecturesNumber:string,
+        lectureNumber:string,
         startDate:string,
         endDate:string,
         classSize:string,
-        image:string,
-        requirements:string[],
+        image?:string,
+        requirements:string,
         className?:string
 }
 const CourseShowCard = (props:courseshowcardprops) => {
   return (
-    <div className={cn('p-0',props.className)}>
+    <div className={cn('z-10 p-0',props.className)}>
         <div className='p-0'>
         {
             
             props.id ?
             <Card className='p-0 shadow-xl'>
-            <CardContent className=' '>
-                <div className='flex items-center gap-4'>
-                    <div className='p-2'>
-                       { 
-                        props.image ?
-                        <Image 
-                            src={props.image}
-                            alt={props.image}
-                            width={10}
-                            height={5}
-                            className='rounded-full h-5 w-5'
-                        />: 
-                        <Skeleton className='w-10 h-10 bg-slate-400 rounded-full'/>                        
-                        }
-                    </div>
+            <CardContent className='p-4'>
+                <div className='flex flex-col items-center gap-4 '>
+                    
                 <CardTitle className='font-poppins text-sml font-bold uppercase   '>
                     {props.name || <Skeleton className='w-10 rounded-lg bg-slate-400'/>}
                 </CardTitle>
                 </div>
-                <CardDescription className='flex flex-col text-foreground  gap-2 p-2 md:p-0 md:gap-0 '>
+                <CardDescription className='flex flex-col text-foreground  space-y-2 gap-4 p-2 md:p-0 md:gap-0 '>
                     <CourseShowCardDiv
                         label='class size'
                         value={props.classSize}
@@ -71,7 +59,7 @@ const CourseShowCard = (props:courseshowcardprops) => {
                 <BtnLink
                     href={`/courses/${props.id}`}
                     label='view course'
-                    className='w-full text-white'
+                    className='w-full cursor-pointer text-white'
                 />
             </CardContent>
         </Card>: <Skeleton className='w-500 h-500 bg-slate-400'/>

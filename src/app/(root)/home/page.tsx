@@ -5,6 +5,7 @@ import CourseCarouselCard from '@/components/customs/Coursecarousel'
 import UserDetailCard from '@/components/customs/userdetailcard'
 import HeroFooter from '@/components/customs/herofooter'
 import { auth, signIn } from '@/lib/auth'
+import { getCourses } from '@/app/action/course'
 
 
 export default async function Home() {
@@ -13,16 +14,17 @@ export default async function Home() {
   //   await signIn()
     
   // }
-
+  const courses = await getCourses()
+  console.log(courses)
   return (
-    <section className='relative -z-10 w-full max-w-full'>
+    <section className=' w-full max-w-full'>
       <HomePageImage
         user={session}
         imageUrl={AdminContent.homeContent.homeImage}
         className=''
       />
       <CourseCarouselCard
-        data={AdminContent.courseContent.courselist}
+        data={courses}
         className=''
        />
       <UserDetailCard

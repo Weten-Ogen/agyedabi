@@ -1,29 +1,24 @@
-'use server'
-import { revalidatePath } from 'next/cache'
-import {prisma} from '../../lib/db'
+'use server';
+import {prisma} from '@/lib/db'
 
-export async function getCourseById(id:string){
-    
+export async function joinCourse(userId:any, courseId:string) {
+    await prisma.courseEnrollment.create({
+  data: {
+    userId,
+    courseId,
+  }
+});
 }
 
-export async function updateCourseById(id:string) {
-   
+export async function createCourse (values:any) {
+    await prisma.course.create({
+        data:{
+            ...values
+        }
+    })
 }
 
-export async function deleteCourseById(id:string) {
-   
-    
-}
-
-export async function deleteCourses(data:FormData) {
-   
-}
-
-
-export async function updateCourses() {
-
-}
-
-export async function createCourse () {
-
+export async function getCourses() {
+    const courses =  await prisma.course.findMany();
+    return courses
 }
