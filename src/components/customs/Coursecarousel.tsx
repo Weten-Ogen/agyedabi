@@ -37,7 +37,7 @@ export default function CourseCarouselCard({ data, className }: Props) {
           {data.map((item, i) => (
             <CarouselItem
               key={i}
-              className="md:basis-1/2 lg:basis-1/3"
+              className="md:basis-1/2 lg:basis-1/3 bg-transparent"
             >
               <CourseShowCard {...item} />
             </CarouselItem>

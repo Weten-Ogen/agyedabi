@@ -23,13 +23,13 @@ interface courseshowcardprops {
 }
 const CourseShowCard = (props:courseshowcardprops) => {
   return (
-    <div className={cn('z-10 p-0',props.className)}>
-        <div className='p-0'>
+    <div className={cn('z-10 p-0 bg-transparent rounded-lg',props.className)}>
+        <div className='p-0 bg-transparent rounded-lg'>
         {
             
             props.id ?
-            <Card className='p-0 shadow-xl'>
-            <CardContent className='p-4'>
+            <Card className='p-0 shadow-lg rounded-lg'>
+            <CardContent className='p-4 rounded-lg '>
                 <div className='flex flex-col items-center gap-4 '>
                     
                 <CardTitle className='font-space-grotesk text-smm font-bold uppercase    pb-2'>

@@ -15,7 +15,6 @@ export default async function Home() {
     
   // }
   const courses = await getCourses()
-  console.log(courses)
   return (
     <section className=' w-full max-w-full'>
       <HomePageImage
