@@ -6,7 +6,6 @@ import AccordionComp from './accordioncomp'
 import BtnLink from './btnlink'
 import Typop from './typop'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion'
-import Image from 'next/image'
 import Typoh2 from './typoh2'
 
 interface heroaccordionprops {

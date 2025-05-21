@@ -19,8 +19,8 @@ const UserDetailCard = (props:userdetailcardprops) => {
   return (
     <div className='flex  flex-col gap-4 p-4 md:max-w-[75%]   md:mx-auto '>
         <div className='p-4 flex flex-col gap-2'>
-        <Typoh2 className='font-poppins text-sml  uppercase font-bold ' >{AdminContent.homeContent.homeTexts.heading}</Typoh2>
-        <Typop className='text-sml text-foreground font-poppins text-left  leading-7 '>{AdminContent.homeContent.homeTexts.subheading}
+        <Typoh2 className='font-space-grotesk text-med  uppercase font-bold ' >{AdminContent.homeContent.homeTexts.heading}</Typoh2>
+        <Typop className='text-smm  bg-clip-text font-space-grotesk text-left  leading-7 md:max-w-3xl'>{AdminContent.homeContent.homeTexts.subheading}
         </Typop>
         </div>
         
@@ -137,46 +137,7 @@ const UserDetailCard = (props:userdetailcardprops) => {
         <Card className='w-full shadow-xl '>
             <CardContent className='w-full flex flex-col gap-4'>
                <AccordionComp
-                details={
-                    [
-                        {
-                            id:"1",
-                            href:"",
-                            title: 'How do i make payment?',
-                            content:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis ullam consequuntur, illo suscipit debitis nisi sequi placeat natus! Praesentium, consequuntur. Ad odit esse ratione accusamus deserunt vero aperiam qui iusto."
-                        },
-                        {
-                            id: "2",
-                            href:"",
-                            title:'How do i join a course?',
-                            content:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis ullam consequuntur, illo suscipit debitis nisi sequi placeat natus! Praesentium, consequuntur. Ad odit esse ratione accusamus deserunt vero aperiam qui iusto."
-                        },
-                        {
-                            id: '3',
-                            href:"",
-                            title:'How long does the course take ?',
-                            content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis ullam consequuntur, illo suscipit debitis nisi sequi placeat natus! Praesentium, consequuntur. Ad odit esse ratione accusamus deserunt vero aperiam qui iusto."
-                        },
-                        {
-                            id: '4',
-                            href:"",
-                            title:'How long does the course take ?',
-                            content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis ullam consequuntur, illo suscipit debitis nisi sequi placeat natus! Praesentium, consequuntur. Ad odit esse ratione accusamus deserunt vero aperiam qui iusto."
-                        },
-                        {
-                            id: '5',
-                            href:"",
-                            title:'How long does the course take ?',
-                            content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis ullam consequuntur, illo suscipit debitis nisi sequi placeat natus! Praesentium, consequuntur. Ad odit esse ratione accusamus deserunt vero aperiam qui iusto."
-                        },
-                        {
-                            id: '6',
-                            href:"",
-                            title:'How long does the course take ?',
-                            content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis ullam consequuntur, illo suscipit debitis nisi sequi placeat natus! Praesentium, consequuntur. Ad odit esse ratione accusamus deserunt vero aperiam qui iusto."
-                        },
-                    ]
-                }
+                details={AdminContent.HeroAccordion}
                />             
             </CardContent>
         </Card>
@@ -185,11 +146,11 @@ const UserDetailCard = (props:userdetailcardprops) => {
     <div className='w-full'>
         <Card className='shadow-lg '>
             <CardContent>
-                <CardTitle className='text-sml uppercase font-poppins  '>
+                <CardTitle className='text-med uppercase font-space-grotesk  '>
                     {AdminContent.homeContent.homeTexts.unvetted.title}
                 </CardTitle>
                 <CardDescription className='flex flex-col gap-4 '>
-                        <Typop className='text-foreground  font-poppins text-sml text-justify leading-6 tracking-wide py-5'>
+                        <Typop className='text-foreground  font-space-grotesk text-smm text-justify leading-6 tracking-wide py-5'>
                             {AdminContent.homeContent.homeTexts.unvetted.text}
                         </Typop>
                         <BtnLink 

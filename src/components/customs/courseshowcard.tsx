@@ -32,11 +32,11 @@ const CourseShowCard = (props:courseshowcardprops) => {
             <CardContent className='p-4'>
                 <div className='flex flex-col items-center gap-4 '>
                     
-                <CardTitle className='font-poppins text-sml font-bold uppercase   '>
+                <CardTitle className='font-space-grotesk text-smm font-bold uppercase    pb-2'>
                     {props.name || <Skeleton className='w-10 rounded-lg bg-slate-400'/>}
                 </CardTitle>
                 </div>
-                <CardDescription className='flex flex-col text-foreground  space-y-2 gap-4 p-2 md:p-0 md:gap-0 '>
+                <CardDescription className='flex flex-col text-foreground   space-y-2 gap-4 p-2 '>
                     <CourseShowCardDiv
                         label='class size'
                         value={props.classSize}

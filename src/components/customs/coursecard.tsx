@@ -14,8 +14,8 @@ const CourseCard = (props:coursecardprops) => {
   return (
     <div className={cn('w-full p-4',props.className)}  >
         <Card className='shadow-lg '>
-            <CardContent className='w-full  flex text-sml flex-col gap-4'>
-                <CardTitle className='text-smm uppercase font-poppins text-center'>
+            <CardContent className='w-full  flex  text-sml flex-col gap-4'>
+                <CardTitle className='text-smm uppercase font-space-grotesk text-center my-4'>
                     {props.details.name}
                 </CardTitle>
                 <CardDescription className='p-2 text-foreground flex flex-col gap-4'>

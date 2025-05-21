@@ -19,24 +19,12 @@ const AccordionComp = (props:acccordioncomprops) => {
                     props.details.map((item:any, i:number) => {
                         return (
                                 <AccordionItem className='' key={i} value={`item.title-${i}`}>
-                                <AccordionTrigger className='bg-white capitalize text-sml'>
+                                <AccordionTrigger className=' capitalize text-smm text-acc-color '>
                                     {item.title}
                                 </AccordionTrigger>
-                                <AccordionContent className='text-sml max-w-5xl leading-7 '>
-                                    <div className='max-w-full h-[40vh] object-contain overflow-hidden'>
-                                        {item.imageUrl && 
-                                         <Image
-                                            src={item.imageUrl}
-                                            alt={item.imageUrl}
-                                            width={800}
-                                            height={800}
-                                            className='w-full h-auto object-cover'
-
-                                         />
-
-                                        }
-                                    </div>
-                                    <Typop>
+                                <AccordionContent className='text-sml max-w-5xl leading-7  '>
+                                    
+                                    <Typop className=' text-sml  '>
                                         {item.content}
                                     </Typop>
                                     <div className=''>
