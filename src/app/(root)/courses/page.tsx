@@ -6,6 +6,7 @@ import CourseCard from '@/components/customs/coursecard'
 import HeroFooter from '@/components/customs/herofooter'
 import { redirect } from 'next/navigation'
 import { auth, signIn } from '@/lib/auth'
+import { getCourses } from '@/app/action/course'
 
 
 export default async function Courses() {
@@ -13,6 +14,7 @@ export default async function Courses() {
     if(!session) {
      await signIn()
     }
+    const courses = await getCourses()
   return (
     <section className='w-full  mt-10'>
       <div
@@ -27,7 +29,7 @@ export default async function Courses() {
 
       </div>
       <div className='grid grid-cols-1 lg:grid-cols-3  items-start  mt-8'>
-        {AdminContent.courseContent.courselist.map((item:courseprops, i:number)=> {
+        {courses.map((item:any, i:number)=> {
           return (<CourseCard
               key={i}
               details={item}
