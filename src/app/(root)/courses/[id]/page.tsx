@@ -9,7 +9,7 @@ import HeroFooter from '@/components/customs/herofooter'
 import BtnLink from '@/components/customs/btnlink'
 import JoinCourseBtn from '@/components/admin/joincoursebtn'
 import { getCourse } from '@/app/action/course'
-import { formatUSD } from '@/lib/utils'
+import { formatCurrency } from '@/lib/utils'
 
 
 export default async function  page({params}:{params : Promise<{id: string}>}) {
@@ -33,7 +33,7 @@ export default async function  page({params}:{params : Promise<{id: string}>}) {
             </Typoh2>
             <CourseShowCardDiv
                 label='registration fees'
-                value={formatUSD(data?.registrationCost as string)}
+                value={formatCurrency(data?.registrationCost as string)}
             />
             <CourseShowCardDiv
                 label='class size'
@@ -53,7 +53,7 @@ export default async function  page({params}:{params : Promise<{id: string}>}) {
             />
             <CourseShowCardDiv
                 label='tuition fees'
-                value={formatUSD(data?.tuitionCost as string)}
+                value={formatCurrency(data?.tuitionCost as string)}
             />       
             <CourseShowCardDiv
                 value={data?.requirements as string} 

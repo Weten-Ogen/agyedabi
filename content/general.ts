@@ -74,7 +74,7 @@ export const AdminContent = {
         {
             course: "Official Course",
             description:"Our official course on Agyedabi teaches programming with a highly professional and pratical approach , making it exciting and accessible for everyone- regardless of  background or experience . With hands-on projects, and real-world internships, we turn coding into a skill you'll enjoy  learning and confidently applying. All  are welcome . ",
-            href:"/",
+            href:"/courses",
             callToAction:"choose plan",
             imageUrl:"/neural.jpg",
             herolist:[
@@ -91,7 +91,7 @@ export const AdminContent = {
         {
             course: "Rust Development",
             description:"Master Rust with our professional and hands-on course on Agyedabi-built for anyone who wants to write fast, safe  and modern code. Whether you're  a beginner or upgrading  your skills, this course makes systems programming exciting, pratical and future-ready . We recommend you first take our official course. This is for experience developers.",
-            href:"/",
+            href:"/courses",
             callToAction:"choose plan",
             imageUrl:"/neural.jpg",
             herolist:[
@@ -106,7 +106,7 @@ export const AdminContent = {
         {
             course: "Legacy C / C++",
             description:"Dive into the foundations of programming  with our Legacy Course on Agyedabi, focusing on C and C++ . This course offers a deep, pratical understanding of low-level programming, giving you full control over how software works. perfect for aspiring engineers,system developers, and tech enthusiasts. This course require  some prior knowledge of programming . We highly recommend to take our official Course first.",
-            href:"/",
+            href:"/courses",
             callToAction:"choose plan",
             imageUrl:"/neural.jpg",
             herolist:[

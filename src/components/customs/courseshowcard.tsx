@@ -5,7 +5,7 @@ import CourseShowCardDiv from './courseshowcarddiv'
 import { Skeleton } from '../ui/skeleton'
 import Image from 'next/image'
 import BtnLink from './btnlink'
-import { cn, formatUSD } from '@/lib/utils'
+import { cn, formatCurrency } from '@/lib/utils'
 
 interface courseshowcardprops {
         id:string,
@@ -39,7 +39,7 @@ const CourseShowCard = (props:courseshowcardprops) => {
                 <CardDescription className='flex flex-col text-foreground   space-y-2 gap-4 p-2 '>
                     <CourseShowCardDiv
                         label='registration fees'
-                        value={formatUSD(props.registrationCost)}
+                        value={formatCurrency(props.registrationCost)}
                            className='justify-between'
 
                     />

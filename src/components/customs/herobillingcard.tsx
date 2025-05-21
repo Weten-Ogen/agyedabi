@@ -1,7 +1,6 @@
 'use client'
 import { cn } from '@/lib/utils'
 import React from 'react'
-import { Card, CardContent } from '../ui/card'
 import HeroBilling from './herobilling'
 import { AdminContent } from '../../../content/general'
 import Typoh2 from './typoh2'
