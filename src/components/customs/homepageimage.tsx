@@ -15,7 +15,7 @@ interface  homepageimageprops {
 
 const HomePageImage = (props:homepageimageprops) => {
   return (
-    <div className={cn('w-full relative  h-[45vh] overflow-hidden object-contain',props.className)}>
+    <div className={cn('w-full relative  h-[50vh    ] md:h-[45vh] overflow-hidden object-contain',props.className)}>
         <div className='-z-20'>
         {
             props.imageUrl ?
@@ -27,11 +27,11 @@ const HomePageImage = (props:homepageimageprops) => {
             className='w-full h-full  md:h-auto md:object-cover '
             />: 
             <Skeleton  
-            className='w-full h-[45vh] bg-slate-400'
+            className='w-full  bg-slate-400'
             />
         }
         </div>
-        <div className='absolute inset-0  bg-black/80 text-white'>
+        <div className='absolute inset-0 h-[45vh] bg-black/80 text-white'>
         <div className=''>
 
             {
