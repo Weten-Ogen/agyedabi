@@ -19,7 +19,7 @@ const AccordionComp = (props:acccordioncomprops) => {
                     props.details.map((item:any, i:number) => {
                         return (
                                 <AccordionItem className='' key={i} value={`item.title-${i}`}>
-                                <AccordionTrigger className=' capitalize text-smm text-acc-color '>
+                                <AccordionTrigger className=' capitalize text-smm font-poppins'>
                                     {item.title}
                                 </AccordionTrigger>
                                 <AccordionContent className='text-sml max-w-5xl leading-7  '>

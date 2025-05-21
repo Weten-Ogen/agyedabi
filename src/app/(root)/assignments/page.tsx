@@ -6,8 +6,8 @@ import React from 'react'
 
 export default async function Assignments() {
    const session = await auth()
-    if(!session) {
-     await signIn()
+    if(!session || session.user.role?.toLowerCase() !== "admin") {
+      redirect('/home')
     }
   const assign  = {
     id: "2",

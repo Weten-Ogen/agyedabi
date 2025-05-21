@@ -9,15 +9,12 @@ import { getCourses } from '@/app/action/course'
 
 
 export default async function Home() {
-  const session = await auth()
-  // if(!session) {
-  //   await signIn()
-    
-  // }
-  const courses = await getCourses()
+  // const session = await auth()
+ 
+  // const courses = await getCourses()
   return (
     <section className=' w-full max-w-full'>
-      <HomePageImage
+      {/* <HomePageImage
         user={session}
         imageUrl={AdminContent.homeContent.homeImage}
         className=''
@@ -30,7 +27,7 @@ export default async function Home() {
          />:
          <div className='hidden'/>
 
-      }
+      } */}
       <UserDetailCard
         userDetail={
           {
@@ -39,7 +36,7 @@ export default async function Home() {
             group: '',
             id : '1',
             name: "Marcus gideon oware",
-            status:'completed',
+            status:'unassigned',
             userRole:'user',
             arrears:'50',
             assignment:'build a card component that has an animation of anything you like.',
@@ -54,9 +51,7 @@ export default async function Home() {
             image:'',
             profilePic:'',
             tuition:'2600',
-            vetted:true,
-
-
+            vetted:false,
           }
         }
       />
