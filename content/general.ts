@@ -205,19 +205,23 @@ export const AdminContent = {
             subheading:"We have a two factor verification for payments systems. You will need to first message the Admin. Then update confirm payment section afterwards.",
             unassigned: {
                 title: " you are not assigned to any course.",
+                heading: "You need to be Assigned to a Course and get Vetted .",
                 text1:" Update your profile page with your personnal details. Do not falsify any details. We accept everyone who is honest. ",
                 text2:"We will reach out to you  for the vetting. We vet only for English Languge . If you wish not to go with our jobs. That will not be needed. We do not charge our tuition upfront , but you may need to pay for the course registration.",
                 text3:"Our goal is to create more jobs for the african youth by 2027 . Our expected index is aiming at six million jobs for the youth. Be part of our dream."
             },
             ongoing:{
+                heading: "Happy learning , we wish you all the best of luck",
                 title:"Keep the fire burning , you are almost there."
             },
             completed:{
+                heading: "You have successfully made it.Now let burn more candles.`",
                 title: "You have officially completed all courses you joined on this site.",
-                
+                joblink: "https://www.turing.com" 
             },
             unvetted:{
                 title: "Welcome  to Agyedabi  Platform.",
+                heading: "Do not make any payment, if you are not vetted .",
                 text:"We are web mentoring platform base in ghana, that trains fullstack developers in 6  to 12 months.We also get you gigs after the training .Our goal is to create more jobs for africans and hence our main target is people base in africa or african's around the globe. Our platform has a pratical approach to teaching and during the training process you will be assigned to real global companies just to build you a profile of 4 years experience developer. When you are complete our course , you will be instantly become  a 4 year experience developer because  the process is meant to expose you to real life issues a 4 years web developer faces daily and the kind of roles you will do.We humbly request you commit to this course fully to experience a change in the direction of your life."
             }
         }

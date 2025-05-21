@@ -28,6 +28,8 @@ export default async function Courses() {
         </Typop>
 
       </div>
+      {
+        courses ?
       <div className='grid grid-cols-1 lg:grid-cols-3  items-start  mt-8'>
         {courses.map((item:any, i:number)=> {
           return (<CourseCard
@@ -36,6 +38,10 @@ export default async function Courses() {
           />)
         })}
       </div>
+      : <Typop>
+        There are currently no course available.
+      </Typop>
+      }
     
     </section>
   )

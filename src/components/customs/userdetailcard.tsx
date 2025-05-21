@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Card, CardContent, CardDescription, CardFooter, CardTitle } from '../ui/card'
 import Typop from './typop'
 import Typoh4 from './typoh4'
@@ -9,6 +9,8 @@ import BtnLink from './btnlink'
 import { AdminContent } from '../../../content/general'
 import { Badge } from '../ui/badge'
 import AccordionComp from './accordioncomp'
+import { getUserById } from '@/app/action/user'
+import { useSession } from 'next-auth/react'
 
 interface userdetailcardprops {
     className?:string,
@@ -16,39 +18,54 @@ interface userdetailcardprops {
 }
 
 const UserDetailCard = (props:userdetailcardprops) => {
-  return (
+    const [user, setUser] = useState<any>()
+    const session = useSession()
+  const getUser = async () => {
+    const user = await getUserById(session.data?.user?.id as string);
+    setUser(user) 
+  }
+  useEffect(() =>{
+    getUser()
+  }, [session])
+    return (
     <div className='flex  flex-col gap-4 p-4 md:max-w-[75%]   md:mx-auto '>
         <div className='p-4 flex flex-col gap-2'>
-        <Typoh2 className='font-space-grotesk text-med  uppercase font-bold ' >{AdminContent.homeContent.homeTexts.heading}</Typoh2>
-        <Typop className='text-smm  bg-clip-text font-space-grotesk text-left  leading-7 md:max-w-3xl'>{AdminContent.homeContent.homeTexts.subheading}
+        <Typoh2 className='font-space-grotesk text-smm  uppercase font-bold ' >
+            { 
+            user?.status.toLowerCase() == 'unvetted' ?  
+             AdminContent.homeContent.homeTexts.heading :
+              user?.status?.toLowerCase() == 'ongoing' ?
+               AdminContent.homeContent.homeTexts.ongoing.heading : 
+              user?.status.toLowerCase() == 'completed' ? 
+              AdminContent.homeContent.homeTexts.completed.heading :
+               AdminContent.homeContent.homeTexts.unassigned.heading 
+         }</Typoh2>
+        <Typop className='text-sml  bg-clip-text font-space-grotesk text-left  leading-7 md:max-w-3xl'>{AdminContent.homeContent.homeTexts.subheading}
         </Typop>
         </div>
         
-        {
-        props.userDetail.vetted ?     
+        {user?.vetted  ?     
         <div className='w-full'>
-        { props.userDetail.status === 'completed' ?
+        { user?.status.toLowerCase() === 'completed' ?
         <Card className='shadow-lg  '>
             <CardContent className='flex flex-col gap-4 p-4'>
-                <CardTitle className='uppercase text-sml'>
+                <CardTitle className='uppercase font-space-grotesk text-smm'>
                       {AdminContent.homeContent.homeTexts.completed.title}
                 </CardTitle>
                 <CardDescription className=' font-poppins'>
                     <div className='md:flex md:flex-col gap-2'>
-                    <Typoh4 className="capitalize font-poppins  text-sml">courses : </Typoh4>
+                    <Typoh4 className="capitalize font-poppins  text-sml">courses:</Typoh4>
                     <div>
+                        <CourseShowCardDiv
+                            label='Status'
+                            value={user?.status}
+                        />
+                        <CourseShowCardDiv
+                            label='course'
+                            value={user?.courses}
+                        />
 
-                    {
-                        props.userDetail.courses &&    
-                        <div className='flex gap-4 items-center'>
-                            {props.userDetail.courses.map((item:string,i:number) => {
-                                return (
-                                    <Badge key={i} className="capitalize p-2 font-poppins ">{item}</Badge>
-                                )
-                                
-                            })}
-                        </div>
-                    }
+                    
                     </div>
                     <CourseShowCardDiv
                         label='debt'
@@ -72,10 +89,10 @@ const UserDetailCard = (props:userdetailcardprops) => {
                 />
             </CardContent>
         </Card>:
-        props.userDetail.status === 'ongoing' ?
+        user?.status.toLowerCase() === 'ongoing' ?
         <Card className='shadow-lg '>
             <CardContent>
-                <CardTitle className='uppercase text-sml font-poppins'>
+                <CardTitle className='uppercase text-sml font-space-grotesk'>
                       {AdminContent.homeContent.homeTexts.ongoing.title}
                 </CardTitle>
                 <CardDescription className='flex flex-col gap-4 space-y-5'>
@@ -146,11 +163,11 @@ const UserDetailCard = (props:userdetailcardprops) => {
     <div className='w-full'>
         <Card className='shadow-lg '>
             <CardContent>
-                <CardTitle className='text-med uppercase font-space-grotesk  '>
+                <CardTitle className='text-smm uppercase font-space-grotesk  '>
                     {AdminContent.homeContent.homeTexts.unvetted.title}
                 </CardTitle>
                 <CardDescription className='flex flex-col gap-4 '>
-                        <Typop className='text-foreground  font-space-grotesk text-smm text-justify leading-6 tracking-wide py-5'>
+                        <Typop className='  font-space-grotesk text-sml text-justify  '>
                             {AdminContent.homeContent.homeTexts.unvetted.text}
                         </Typop>
                         <BtnLink 

@@ -24,7 +24,7 @@ export async function updateUserById(values:any) {
         email:values.email,
         country:values.country,
         contact:values.contact,
-        occupation:values.occupation
+        occupation:values.occupation, 
     }
    })
 }

@@ -32,7 +32,7 @@ const CourseShowCard = (props:courseshowcardprops) => {
             <CardContent className='p-4 rounded-lg '>
                 <div className='flex flex-col items-center gap-4 '>
                     
-                <CardTitle className='font-space-grotesk text-smm font-bold uppercase    pb-2'>
+                <CardTitle className='font-space-grotesk text-sml font-bold uppercase    pb-2'>
                     {props.name || <Skeleton className='w-10 rounded-lg bg-slate-400'/>}
                 </CardTitle>
                 </div>

@@ -22,10 +22,15 @@ export default async function Home() {
         imageUrl={AdminContent.homeContent.homeImage}
         className=''
       />
-      <CourseCarouselCard
-        data={courses}
-        className=''
-       />
+      {
+        courses ?
+        <CourseCarouselCard
+          data={courses}
+          className=''
+         />:
+         <div className='hidden'/>
+
+      }
       <UserDetailCard
         userDetail={
           {
@@ -34,7 +39,7 @@ export default async function Home() {
             group: '',
             id : '1',
             name: "Marcus gideon oware",
-            status:'unassigned',
+            status:'completed',
             userRole:'user',
             arrears:'50',
             assignment:'build a card component that has an animation of anything you like.',

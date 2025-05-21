@@ -8,6 +8,14 @@ export async function joinCourse(userId:any, courseId:string) {
     courseId,
   }
 });
+    await prisma.user.update({
+        where:{
+            id:userId
+        },
+        data:{
+            status: 'ONGOING'
+        }
+    })
 }
 
 

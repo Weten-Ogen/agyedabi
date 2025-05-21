@@ -39,7 +39,6 @@ interface updateprofileprops {
         const formSheme  = useForm<z.infer<typeof formSchema>>({
             resolver: zodResolver(formSchema),
             defaultValues:{
-                   
                     name:props?.details?.name  || "",
                     registrationCost:props?.details?.registrationCost  || "",
                     tuitionCost:props.details?.tuitionCost  || "",
@@ -119,7 +118,13 @@ interface updateprofileprops {
                     label='Registration Fee'
                     placeholder='Enter your  fee'
                 />            
-                        
+
+                  <CustomCourseFormField
+                    control={formSheme.control}
+                    name='timespan'
+                    label='Duration'
+                    placeholder='Enter your  fee'
+                />      
                 <Button className='text-white w-full bg-acc-color/80 p-4  shadow-lg  rounded-lg hover:duration-300 hover:ease-out hover:-translate-y-0.5 uppercase hover:bg-acc-color cursor-pointer hover:text-white '>
                     submit
                 </Button>

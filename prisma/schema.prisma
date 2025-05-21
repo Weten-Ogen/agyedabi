@@ -21,9 +21,11 @@ model User {
   contact       String?
   profileImage  String?
   email         String          @unique
+  vetted        Boolean         @default(false)
   emailVerified DateTime?
   image         String?
   bio           String?
+  score         Int    @default(0)
   accounts      Account[]
   sessions      Session[]
   // Optional for WebAuthn support
@@ -273,4 +275,5 @@ enum UserStatus {
   UNASSIGNED
   ONGOING
   UNVETTED
+  
 }

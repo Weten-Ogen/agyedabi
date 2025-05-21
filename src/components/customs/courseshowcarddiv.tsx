@@ -20,7 +20,7 @@ const CourseShowCardDiv = (props: CourseShowCardDivProps) => {
       {props.label ? (
         <Typoh4
           className={cn(
-            'font-space-grotesk text-sml md:text-smm text-left capitalize',
+            'font-space-grotesk text-sml  text-left capitalize',
             props.labelClass
           )}
         >
