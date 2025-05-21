@@ -20,10 +20,10 @@ export default async function Courses() {
       <div
         className='p-4 flex flex-col  bg-acc-color h-[50vh] text-white py-10 gap-4'
       >
-        <Typoh2 className='text-lag font-poppins uppercase  lg:p-4'>
+        <Typoh2 className=' text-med md:text-lag font-space-grotesk uppercase  lg:p-4'>
           {AdminContent.courseContent.courseinfo.heading}
         </Typoh2>
-        <Typop className='text-smm font-thin font-poppins  uppercase  lg:p-4'>
+        <Typop className='text-smm font-thin font-space-grotesk  uppercase  lg:p-4'>
           {AdminContent.courseContent.courseinfo.subHeading}
         </Typop>
 
