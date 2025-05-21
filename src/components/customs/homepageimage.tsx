@@ -15,8 +15,8 @@ interface  homepageimageprops {
 
 const HomePageImage = (props:homepageimageprops) => {
   return (
-    <div className={cn('w-full relative  h-[50vh    ] md:h-[45vh] overflow-hidden object-contain',props.className)}>
-        <div className='-z-20'>
+    <div className={cn('w-full relative  md:h-[45vh] overflow-hidden object-contain',props.className)}>
+        <div className='-z-20 '>
         {
             props.imageUrl ?
             <Image
@@ -32,7 +32,7 @@ const HomePageImage = (props:homepageimageprops) => {
         }
         </div>
         <div className='absolute inset-0 h-[45vh] bg-black/80 text-white'>
-        <div className=''>
+        <div className='pt-10'>
 
             {
                 props.user &&
