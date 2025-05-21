@@ -32,7 +32,7 @@ const HomePageImage = (props:homepageimageprops) => {
         }
         </div>
         <div className='absolute inset-0 h-[45vh] bg-black/80 text-white'>
-        <div className='pt-10'>
+        <div className='pt-6'>
 
             {
                 props.user &&
