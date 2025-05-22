@@ -43,7 +43,7 @@ const Hero = (props: heroprops) => {
             <BtnLink
                 href='https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?response_type=code&client_id=108050337403-ku8t66ucm9otms14eohrvabckebpik7n.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fwww.agyedabi.shop%2Fapi%2Fauth%2Fcallback%2Fgoogle&code_challenge=baFKinlqZFSngRI24mwoEk6z5gtheR7rKt7VL9GAb2w&code_challenge_method=S256&scope=openid%20profile%20email&service=lso&o2v=2&flowName=GeneralOAuthFlow'
                 label='join our community'
-                className='text-white bg-acc-color hover:bg-acc-color hover:text-white'
+                className='text-white max-w-lg bg-acc-color hover:bg-acc-color hover:text-white'
             />
         </div>
         </div>
