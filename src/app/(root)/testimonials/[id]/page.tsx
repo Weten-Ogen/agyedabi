@@ -45,12 +45,14 @@ export default async function page({params}:{params : Promise<{id: string}>}) {
                 <Typop>{testimonial?.content as string}</Typop>
             </div>
             <div className='max-w-full h-auto'>
-                {/* <Image
+                <Image
                     className='object-fit w-full h-auto'
                     alt={testimonial?.name as string}
                     src={testimonial?.imageUrl as string}
+                    width={800}
+                    height={800}
 
-                /> */}
+                />
 
             </div>
         </div>
