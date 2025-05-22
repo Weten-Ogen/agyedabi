@@ -8,7 +8,7 @@ import BtnLink from './btnlink'
 
 const CompletedComp = (props:userprops) => {
   return (
-  <div>
+  <div className='p-4'>
         <Card className='shadow-lg  '>
             <CardContent className='flex flex-col gap-4 p-4'>
                 <CardTitle className='uppercase font-space-grotesk text-smm'>
