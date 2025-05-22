@@ -115,3 +115,9 @@ interface herofooterlinkprops {
     href:string,
 }
 
+interface reportprops {
+    sender: string,
+    title?:string,
+    message: string,
+   
+}

@@ -93,7 +93,7 @@ export default async function Cover() {
                         callToAction:"contact us",
                         content:"At Agyedabi, we're on a mission to  equip 26,000 Africans with in-demand skills  by the end of 2027. Our goal is to empower individuals to solve their own technical challenges and create opportunities for themselves.Whether  through freelancing, enterpreneurship  or employment. By making practical, modern education  accessible  and affordable, we aim to fight poverty at it's root and help build a self-reliant, skill generation across the continent.",
                         heading:'about us',
-                        href:'/about',
+                        href:'/profile/help',
                         imageUrl:"/neural.jpg",
                      }}
                   />

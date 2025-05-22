@@ -21,8 +21,14 @@ interface userdetailcardprops {
 }
 
 const UserDetailCard = (props:userdetailcardprops) => {
-    const [user, setUser] = useState<any>(props.userDetail)
-    // const session = useSession()
+    const [user, setUser] = useState<any>()
+    const session = useSession()
+    const setstate = () => {
+        setUser(session.data?.user)
+    }
+    useEffect(()=> {
+        setstate()
+    } , [session])
   
     return (
     <div className='flex  flex-col gap-4 p-4 md:max-w-[75%] mt-20  md:mx-auto '>

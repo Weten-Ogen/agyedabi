@@ -29,7 +29,6 @@ const HeroAccordion = (props : heroaccordionprops) => {
                     {item.title}
                 </AccordionTrigger>
                 <AccordionContent className='text-sml max-w-5xl leading-7 '>
-                    
                     <Typop className='text-sml  text-muted-foreground'>
                         {item.content}
                     </Typop>

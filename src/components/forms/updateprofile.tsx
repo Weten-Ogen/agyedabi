@@ -60,43 +60,43 @@ interface updateprofileprops {
                     control={formSheme.control}
                     name='name'
                     label='Name'
-                    placeholder=''
+                    placeholder='enter your name here.'
                 />
                 <CustomUpdateFormField
                     control={formSheme.control}
                     name='email'
                     label='Email'
-                    placeholder=''
+                    placeholder='enter your email here.'
                 />
                 <CustomUpdateFormField
                     control={formSheme.control}
                     name='contact'
                     label='Contact'
-                    placeholder=''
+                    placeholder='enter your Whatsapp contact here'
                 />
                 <CustomUpdateFormField
                     control={formSheme.control}
                     name='bio'
-                    label='Bio'
+                    label='Bio (tell us a little about yourself)'
                     placeholder='Enter your Bio'
                 />
                 <CustomUpdateFormField
                     control={formSheme.control}
                     name='country'
                     label='Country'
-                    placeholder='Enter your country.'
+                    placeholder='Where are you from.'
                 />
                 <CustomUpdateFormField
                     control={formSheme.control}
                     name='city'
                     label='City'
-                    placeholder='Enter your  city'
+                    placeholder='the city you live in'
                 />
                 <CustomUpdateFormField
                     control={formSheme.control}
                     name='address'
-                    label='Address'
-                    placeholder='Enter your  address'
+                    label='Residence Address'
+                    placeholder='name of place of residence or stay'
                 />             
                 <Button className='text-white w-full bg-acc-color/80 p-4  shadow-lg  rounded-lg hover:duration-300 hover:ease-out hover:-translate-y-0.5 uppercase hover:bg-acc-color cursor-pointer hover:text-white '>
                     submit

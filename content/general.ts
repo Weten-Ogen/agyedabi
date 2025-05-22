@@ -33,7 +33,7 @@ export const AdminContent = {
             id:'1',
             callToAction:'update profile',
             content:'Welcome to Agyedabi!,We’re excited to have you on board.To get started, please update your profile with accurate and complete information. This helps us understand your background, tailor your learning experience, and connect you with the right opportunities.A well-filled profile not only enhances your bootcamp journey but also increases your chances of landing gigs afterward. The more we know about you, the better we can support you , every step of the way.Let’s build your future, together.',
-            href:"/profile/update/1",
+            href:`/profile/update/${1}`,
             title:"Have you update your profile Page ?",
             imageUrl:"/neural.jpg"
          },
@@ -41,7 +41,7 @@ export const AdminContent = {
             id:'2',
             callToAction:'join course',
             content:"Getting Started at Agyedabi.To begin your journey, you'll need to register by paying a small fee. While some courses may cost less, our official full program requires a $100 registration fee.You're welcome to explore other options, but if your goal is to land a tech gig with our support, we highly recommend enrolling in the official program. It’s built to equip you with the in-demand skills, personalized mentorship, and hands-on experience you need to succeed in today’s tech industry.And the best part? You don’t pay the full tuition until you’ve landed a job , meaning there’s no upfront financial risk.Take the first step toward a future in tech , we’re here to help you every step of the way.",
-            href:"/profile/course/1",
+            href:"/courses",
             title:"What do i need to do after updating my profile page ?",
             imageUrl:"/neural.jpg"
          },
@@ -49,7 +49,7 @@ export const AdminContent = {
             id: '3',
             callToAction:'',
             content:'Important Payment Notice. All payments for Agyedabi services must be made exclusively through our official app. Please do not send money through third-party platforms, personal links, or individuals.If you receive any payment request or link claiming to represent Agyedabi, always verify its authenticity by searching “Agyedabi” on Google and using only the official app or website.We will not be responsible for any loss resulting from payments made outside our verified platforms. Stay safe — and always pay through the official channels.',
-            href:"/profile/profile/payment",
+            href:"/profile/payment",
             title:"What of the payments and how to go about it?",
             imageUrl:"/neural.jpg"
          },
@@ -58,14 +58,14 @@ export const AdminContent = {
             callToAction:'contact us',
             content:'Need Help? .For any questions or concerns, please reach out to Agyedabi through the Help link available on our official channels.We’re here to support you — and to help you change your direction for the better.',
             href:"/profile/help",
-            title:"Do you need help with any of this process",
+            title:"Do you need help with any of this process ?",
             imageUrl:"/neural.jpg"
          },
          {
             id: '5',
-            callToAction:'',
+            callToAction:'make payment',
             content:"Agyedabi is Not a School — It’s a Skill ShopAt Agyedabi, we don’t operate like a traditional school. We’re a shop for skills — focused on helping you learn what matters and land real gigs.The registration fee is not just a payment — it’s your way of showing commitment and securing a slot in the course. While we’d love to teach everyone at once, we prioritize quality over quantity, ensuring every learner gets the attention and guidance they need.This fee also helps cover the initial setup and preparation needed to kick-start your learning journey.We're here to help you grow — one skill, one gig, and one step at a time.",
-            href:"/profile/profile/payment",
+            href:"/profile/payment",
             title:"Why do I make need to make registrations payments two weeks before start date ?",
            
          },
@@ -231,9 +231,7 @@ export const AdminContent = {
         courseinfo:{
             heading:"Course tailored to meet mordern demands.",
             subHeading:"Registrations fees are to be paid  a month before the course starts or you will be pushed to the next enrollments.",
-
-        }
-        ,
+        },
         courselist: [
             {
                 id:"1",

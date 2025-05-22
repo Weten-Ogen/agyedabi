@@ -17,3 +17,15 @@ export const UserAssignmentProfileSchema = z.object({
     submissionDate:z.string(),
     result:z.string(),
 })
+
+export const ReportFormSchema = z.object({
+    title:z.string().optional(),
+    message:z.string(),
+   
+})
+
+export const PaymentFormSchema = z.object({
+    userId:z.string(),
+    method:z.string(),
+    amount:z.string(),
+})
