@@ -7,8 +7,8 @@ import { redirect } from 'next/navigation';
 
 export default async function page() {
   const session = await auth();
-  if(!session || session.user.role?.toLowerCase() !== 'admin'){
-    toast.error('You need to wait for the course to begin')
+  if(session?.user.role?.toLowerCase() === 'admin'){
+    
     redirect('/home')
   }
   return (
