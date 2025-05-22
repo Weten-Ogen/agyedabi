@@ -7,6 +7,7 @@ import Typoh4 from '../customs/typoh4'
 import Typop from '../customs/typop'
 import TypoBtn from '../customs/typobtn'
 import { Session } from 'next-auth'
+import BtnLink from '../customs/btnlink'
 
 interface heroprops {
     className?:string,
@@ -39,9 +40,11 @@ const Hero = (props: heroprops) => {
             <Typoh4 className='normal leading-7 md:max-w-xl text-sml font-space-grotesk md:text-smm text-left md:text-justify '>
                     {props.subHeading}
             </Typoh4>
-            <TypoBtn className='bg-acc-color  text-pri-color text-sml uppercase  hover:bg-pri-color font-space-grotesk hover:text-acc-color tracking-wider md:w-xl py-2 px-8' href="/api/auth/callback/google">
-                join us
-            </TypoBtn>
+            <BtnLink
+                href='https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?response_type=code&client_id=108050337403-ku8t66ucm9otms14eohrvabckebpik7n.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fwww.agyedabi.shop%2Fapi%2Fauth%2Fcallback%2Fgoogle&code_challenge=baFKinlqZFSngRI24mwoEk6z5gtheR7rKt7VL9GAb2w&code_challenge_method=S256&scope=openid%20profile%20email&service=lso&o2v=2&flowName=GeneralOAuthFlow'
+                label='join our community'
+                className='text-white bg-acc-color hover:bg-acc-color hover:text-white'
+            />
         </div>
         </div>
        
