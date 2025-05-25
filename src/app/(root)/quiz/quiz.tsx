@@ -14,20 +14,20 @@ interface QuizProps {
 }
 
 export function Quiz({ quizData }: QuizProps) {
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
-  const [userAnswers, setUserAnswers] = useState<any[]>(quizData.questions.map(() => ({ selectedOptions: [] })))
-  const [isSubmitted, setIsSubmitted] = useState(false)
-  const [showResults, setShowResults] = useState(false)
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [userAnswers, setUserAnswers] = useState<any[]>(quizData.questions.map(() => ({ selectedOptions: [] })));
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [showResults, setShowResults] = useState(false);
 
   const currentQuestion = quizData.questions[currentQuestionIndex]
-  const isLastQuestion = currentQuestionIndex === quizData.questions.length - 1
-  const isFirstQuestion = currentQuestionIndex === 0
+  const isLastQuestion = currentQuestionIndex === quizData.questions.length - 1;
+  const isFirstQuestion = currentQuestionIndex === 0;
 
   // Calculate progress percentage
-  const progress = ((currentQuestionIndex + 1) / quizData.questions.length) * 100
+  const progress = ((currentQuestionIndex + 1) / quizData.questions.length) * 100;
 
   // Check if all questions have been answered
-  const allQuestionsAnswered = userAnswers.every((answer) => answer.selectedOptions.length > 0)
+  const allQuestionsAnswered = userAnswers.every((answer) => answer.selectedOptions.length > 0);
 
   // Handle answer selection
   const handleAnswerSelect = (selectedOptions: string[]) => {

@@ -42,7 +42,7 @@ interface updateprofileprops {
             toast('update was successful')
         }
     return (
-    <div className={cn('md:w-[80%] md:mx-auto ',props.className)}>
+    <div className={cn(' md:w-[60%] md:mx-auto h-screen  p-4 ',props.className)}>
         <Form  {...formSheme}>
                 <Card className='p-0'>
                     <CardContent className='bg-acc-color/75 text-white p-4 rounded-lg'>

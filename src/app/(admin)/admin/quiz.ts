@@ -103,7 +103,7 @@ export interface User {
   id: string
   name: string
   email: string
-  role: "admin" | "editor" | "viewer"
+  role: "admin" | "user" | "employee" | "client" | "blocked"
   active: boolean
   createdAt: string
 }
@@ -121,7 +121,7 @@ export const users: User[] = [
     id: "489e1d42-7506-42f3-b786-a7bf1bce333a",
     name: "Jane Smith",
     email: "jane@example.com",
-    role: "editor",
+    role: "user",
     active: true,
     createdAt: "2023-02-15T00:00:00.000Z",
   },
@@ -129,7 +129,7 @@ export const users: User[] = [
     id: "6d7ebf42-c24e-48da-b5fa-d5a15d2e5c99",
     name: "Bob Johnson",
     email: "bob@example.com",
-    role: "viewer",
+    role: "blocked",
     active: false,
     createdAt: "2023-03-20T00:00:00.000Z",
   },
@@ -137,7 +137,7 @@ export const users: User[] = [
     id: "a57f22e0-5bd5-4a2b-bf1d-2b98cbcf5321",
     name: "Alice Williams",
     email: "alice@example.com",
-    role: "editor",
+    role: "employee",
     active: true,
     createdAt: "2023-04-25T00:00:00.000Z",
   },
@@ -145,7 +145,7 @@ export const users: User[] = [
     id: "e4b9d0e5-7a87-4152-9c6b-9771b9226aa7",
     name: "Charlie Brown",
     email: "charlie@example.com",
-    role: "viewer",
+    role: "client",
     active: true,
     createdAt: "2023-05-30T00:00:00.000Z",
   },
@@ -161,7 +161,7 @@ export const users: User[] = [
     id: "b9a5d932-31f2-4a9f-b87a-f7235b1b91a7",
     name: "Ethan Hunt",
     email: "ethan@example.com",
-    role: "viewer",
+    role: "user",
     active: true,
     createdAt: "2023-07-10T00:00:00.000Z",
   },
@@ -169,7 +169,7 @@ export const users: User[] = [
     id: "c6d7e8f9-0a1b-2c3d-4e5f-6789abcdef01",
     name: "Fiona Gallagher",
     email: "fiona@example.com",
-    role: "editor",
+    role: "user",
     active: true,
     createdAt: "2023-08-15T00:00:00.000Z",
   },
@@ -177,7 +177,7 @@ export const users: User[] = [
     id: "d7e8f9a0-1b2c-3d4e-5f67-89abcdef0123",
     name: "George Miller",
     email: "george@example.com",
-    role: "viewer",
+    role: "user",
     active: false,
     createdAt: "2023-09-20T00:00:00.000Z",
   },
@@ -185,7 +185,7 @@ export const users: User[] = [
     id: "e8f9a0b1-2c3d-4e5f-6789-abcdef012345",
     name: "Hannah Baker",
     email: "hannah@example.com",
-    role: "editor",
+    role: "user",
     active: true,
     createdAt: "2023-10-25T00:00:00.000Z",
   },

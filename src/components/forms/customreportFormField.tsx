@@ -21,15 +21,24 @@ const CustomReportFormField = (props:customupdateformfieldprops) => {
         control={props.control}
         name={props.name}
         render={({field})=> 
-        ( <div className='flex flex-col gap-2'>
+        ( <div className='flex flex-col gap-2 '>
                     <FormLabel className='font-poppins text-sml uppercase'>{props.label}</FormLabel>
                     <FormControl>
-                        <Input
-                        type='text'
-                        className='font-poppins text-foreground bg-white '
-                        placeholder={props.placeholder}
-                        {...field}
-                        />
+                        {
+                            props.name == 'message' ?
+                            <Textarea
+                                {...field}
+                                className="w-full bg-white text-black h-50"
+                                placeholder={props.placeholder}
+                            />
+                            :
+                            <Input
+                            type='text'
+                            className='font-poppins text-foreground bg-white '
+                            placeholder={props.placeholder}
+                            {...field}
+                            />
+                        }
                  </FormControl>
                  </div>)}/>)}
 export default CustomReportFormField
