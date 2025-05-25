@@ -22,7 +22,7 @@ export function formatCurrency(value: string, locale?: string, currency?: string
     'en-GH': 'GHS', // Ghana
   };
 
-  const resolvedCurrency = currency || currencyMap[userLocale] || 'GHS';
+  const resolvedCurrency = currencyMap['en-GH'];
 
   return new Intl.NumberFormat(userLocale, {
     style: 'currency',
