@@ -19,7 +19,7 @@ const SignInBtn = (props: signprops) => {
         <Button className={cn('bg-acc-color text-sml font-poppins  capitalize text-white hover:bg-acc-colo  cursor-pointer hover:duration-300 ease-out hover:-translate-y-0.5  hover:text-white ',props.className)} onClick={()=> {
           signIn('google')
           session.status === 'authenticated' && router.push('/home')
-          session.status === 'authenticated' && toast('logged in successfully')
+          session.status === 'authenticated' && toast.success('logged in successfully')
 
         }}>{props.label ? props.label : 'log in'}</Button>
     </div>
