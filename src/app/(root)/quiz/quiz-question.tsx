@@ -26,15 +26,15 @@ export function QuizQuestion({ question, selectedOptions, onAnswerSelect }: Quiz
   }
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4  md:flex md:gap-8    ">
       <h3 className="text-lg font-medium mb-4">{question.text}</h3>
-
+      <div>
       {question.type === "single" ? (
         <RadioGroup value={selectedOptions[0] || ""} onValueChange={handleSingleSelect} className="space-y-3">
           {question.options.map((option:any) => (
             <div
-              key={option.id}
-              className="flex items-center space-x-2 p-3 rounded-md border hover:bg-muted/50 transition-colors"
+            key={option.id}
+            className="flex items-center space-x-2 p-3 rounded-md border hover:bg-muted/50 transition-colors"
             >
               <RadioGroupItem value={option.id} id={option.id} />
               <Label htmlFor={option.id} className="flex-grow cursor-pointer">
@@ -54,7 +54,7 @@ export function QuizQuestion({ question, selectedOptions, onAnswerSelect }: Quiz
                 id={option.id}
                 checked={selectedOptions.includes(option.id)}
                 onCheckedChange={(checked) => handleMultipleSelect(option.id, checked === true)}
-              />
+                />
               <Label htmlFor={option.id} className="flex-grow cursor-pointer">
                 {option.text}
               </Label>
@@ -62,6 +62,7 @@ export function QuizQuestion({ question, selectedOptions, onAnswerSelect }: Quiz
           ))}
         </div>
       )}
+      </div>
     </div>
   )
 }

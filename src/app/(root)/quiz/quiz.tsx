@@ -31,7 +31,7 @@ export function Quiz({ quizData }: QuizProps) {
 
   // Handle answer selection
   const handleAnswerSelect = (selectedOptions: string[]) => {
-    const updatedAnswers = [...userAnswers]
+    const updatedAnswers = [...userAnswers];
     updatedAnswers[currentQuestionIndex] = { selectedOptions }
     setUserAnswers(updatedAnswers)
   }

@@ -42,7 +42,7 @@ export function QuizResults({ quizData, userAnswers, onRestart }: QuizResultsPro
     }
   }
 
-  const result = calculateScore()
+  const result = calculateScore();
 
   return (
     <Card className="w-full max-w-3xl mx-auto">
