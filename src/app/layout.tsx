@@ -27,6 +27,7 @@ export default function RootLayout({
       <body
         className={`font-poppins scroll-smooth antialiased ${poppins.className} ${spaceGrotesk.variable}`}
       >
+      <Analytics/>
         <Toaster 
           richColors
           position="top-center"
