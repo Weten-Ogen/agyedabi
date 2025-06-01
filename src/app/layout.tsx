@@ -4,7 +4,7 @@ import "./globals.css";
 import Provider from "@/components/provider";
 import { Toaster } from "sonner";
 import { Space_Grotesk } from 'next/font/google';
-
+import { Analytics } from "@vercel/analytics/next"
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
   variable: '--font-space-grotesk',
