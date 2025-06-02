@@ -71,8 +71,8 @@ export default async function  page({params}:{params : Promise<{id: string}>}) {
                     <CardTitle className='text-center text-smm uppercase font-space-grotesk '>
                         Course Outline
                     </CardTitle>
-                    <CardDescription className=''>
-                        <ol className='list-decimal flex flex-col p-4 gap-4' >
+                    <CardDescription className='mt-5'>
+                        <ol className='list-decimal grid grid-col-1 md:grid-cols-2 md:mx-auto md:w-[80%]  p-4 gap-4' >
                         {
                             AdminContent.courseoutlines.officialcourse.map((item:any) => {
                                 return(

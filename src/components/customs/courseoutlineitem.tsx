@@ -9,7 +9,7 @@ interface courseoutlineprops {
 }
 const CourseOutlineItem = (props:courseoutlineprops) => {
   return (
-    <li className={cn('capitalize text-smm font-poppins',props.className)}>
+    <li className={cn('capitalize text-sml  font-poppins',props.className)}>
         {props.text}
     </li>
   )
