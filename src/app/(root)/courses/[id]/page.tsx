@@ -4,12 +4,13 @@ import Typoh2 from '@/components/customs/typoh2'
 import Typoh4 from '@/components/customs/typoh4'
 import CourseShowCardDiv from '@/components/customs/courseshowcarddiv'
 import CourseShowCardMapDiv from '@/components/customs/courseshowcardmapdiv'
-import { Card, CardContent } from '@/components/ui/card'
+import { Card, CardContent, CardDescription, CardTitle } from '@/components/ui/card'
 import HeroFooter from '@/components/customs/herofooter'
 import BtnLink from '@/components/customs/btnlink'
 import JoinCourseBtn from '@/components/admin/joincoursebtn'
 import { getCourse } from '@/app/action/course'
 import { formatCurrency } from '@/lib/utils'
+import CourseOutlineItem from '@/components/customs/courseoutlineitem'
 
 
 export default async function  page({params}:{params : Promise<{id: string}>}) {
@@ -62,6 +63,33 @@ export default async function  page({params}:{params : Promise<{id: string}>}) {
             </div>
                 </CardContent>
             </Card>
+            {
+                data?.name.split(' ').includes('Official') &&
+
+            <Card>
+                <CardContent className=''>
+                    <CardTitle className='text-center text-smm uppercase font-space-grotesk '>
+                        Course Outline
+                    </CardTitle>
+                    <CardDescription className=''>
+                        <ol className='list-decimal flex flex-col p-4 gap-4' >
+                        {
+                            AdminContent.courseoutlines.officialcourse.map((item:any) => {
+                                return(
+                                    <CourseOutlineItem
+                                    text={item.label}
+                                        key={item.id}
+                                        className=''
+                                        />
+                                )
+                            })
+                        }
+                        </ol>
+                    </CardDescription>
+                </CardContent>
+            </Card>
+            }
+            
        <JoinCourseBtn courseId={id}/>
     </section>
   )

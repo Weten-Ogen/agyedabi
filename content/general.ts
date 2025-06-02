@@ -28,6 +28,75 @@ export const AdminContent = {
     name:'Alexander Mintah'
     },
     ],
+    courseoutlines: {
+        officialcourse: [
+            {
+                id: '1',
+                label:'git'
+            },
+            {
+                id: '2',
+                label:'html && html5'
+            },
+            {
+                id: '3',
+                label:'css3 && tailwindcss'
+            },
+            {
+                id: '4',
+                label:'Javascript '
+            },
+            {
+                id: '5',
+                label:'browser and dom'
+            },
+            {
+                id: '6',
+                label:'python'
+            },
+            {
+                id: '7',
+                label:'data structures'
+            },
+            {
+                id: '8',
+                label:'algorithms'
+            },
+            {
+                id: '9',
+                label:'framework introduction'
+            },
+            {
+                id: '10',
+                label:'react'
+            },
+            {
+                id: '11',
+                label:'node && express'
+            },
+            {
+                id: '12',
+                label:'postgres && Prisma'
+            },
+            {
+                id: '13',
+                label:'Project design'
+            },
+            {
+                id: '14',
+                label:'Next.js'
+            },
+            {
+                id: '15',
+                label:'React Native'
+            },
+            {
+                id: '16',
+                label:'Profiling'
+            },
+        ],
+        
+    },
     HeroAccordion:[
         {
             id:'1',
